@@ -1,6 +1,84 @@
-.btn
-  bg: green
-.head-b
+.head
+  d: flex
+  f-dir: column
+  ai: center
+  jc: center
   &__
-    &btn
-      bg: yellow
+    &logo
+      &--
+        &img
+          w: 100%
+        //object-fit: cover
+        //object-position: top right
+
+.info
+  &__
+    &work
+      d: flex
+      f-dir: column
+         
+    &phone
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 25px
+      +mq-sm
+        fs: 27px
+      +mq-md
+        fs: 28px
+      +mq-lg
+        fs: 29px
+      +mq-xl
+        fs: 30px
+    &icon
+      mr: 3px
+      font-family: ElegantIcons
+      fw: 800
+      color: var(--theme-text-1)
+      fs: 20px
+      +mq-sm
+        fs: 22px
+      +mq-md
+        fs: 23px
+      +mq-lg
+        fs: 24px
+      +mq-xl
+        fs: 25px
+    &time
+      fw: 400
+      fs: 9px
+      color: var(--theme-text-2)
+      +mq-sm
+        fs: 10px
+      +mq-md
+        fs: 11px
+      +mq-lg
+        fs: 12px
+      +mq-xl
+        fs: 13px
+        
+.navbar
+  d: flex
+  ai: center
+  jc: center
+  &__
+    &link
+      ma: 0px 5px
+      fw: 400
+      fs: 9px
+      color: var(--theme-text-2)
+      +mq-sm
+        fs: 10px
+      +mq-md
+        fs: 11px
+      +mq-lg
+        fs: 12px
+      +mq-xl
+        fs: 13px
+
+.order
+  &__
+    &item
+      ma: 10px 0px
+      &--
+        &color
+          color: var(--theme-text-1)

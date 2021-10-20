@@ -1,4 +1,18 @@
 include ../../mixins/index
 
-+b.w-head.HEADER
-  
++b.head-wrap.HEADER
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.head
+      +e.logo
+        +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+      +b.info
+        +b.navbar.NAV
+          each name in ['О нас', 'Новости', 'Энциклопедия матрасов', 'Gash Care', 'Контакты']
+            +e.link.A= name
+        +e.work
+          +e.phone.A #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
+          +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
+      +b.order.UL 
+        +e.item.LI #[+e.item--color.SPAN –]  Запись на прием 
+        +e.item.LI #[+e.item--color.SPAN –]  Индивидуальный подбор матраса 
+        +e.item.LI #[+e.item--color.SPAN –]  Обратный звонок
