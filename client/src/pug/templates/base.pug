@@ -1,0 +1,41 @@
+include ../mixins/index
+<!DOCTYPE html>
+html(lang='ru')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="theme-color" content="#8F67A4")
+    link(
+      rel="stylesheet",
+      type="text/css",
+      media="all",
+      href='../static/css/style.css'
+    )
+    link(
+      rel="icon",
+      href='../static/img/favicon.ico',
+      type="image/x-icon"
+    )
+
+    
+  body
+    #app
+      block header
+          include ./element/header
+        
+      block contenter
+        main.main
+          include ./home/basic
+          include ./home/goods
+          include ./home/hand
+          include ./home/cond-w
+          include ./home/blog
+          include ./home/spec-mat
+          include ./home/subscription
+          include ./element/our-links
+          
+      block foot
+        include ./element/footer
+    script(type="text/javascript", src='../static/js/vendor.js')
+    script(type="text/javascript", src='../static/js/main.js')

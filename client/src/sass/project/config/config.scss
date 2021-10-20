@@ -1,0 +1,130 @@
+$TONE_GENERATE_THEME: false;
+$TONE_GENERATE_PALETTES: false;
+
+$theme-default: (
+  accent: (
+    bg: #FAFAFA,
+    white: #FFFFFF,
+    blue: #4094EF,
+    dark-blue: #133768,
+    red: #DC565B,
+    grey: #F9F9F9,
+    black: #262626,
+    dark-grey: #8a8a8a,
+    purple: #d946db,
+  ),
+  primary: (
+    main: #E0E0E0,
+    inverse: #0f7baa,
+    dark: #098ec7,
+    red: #D0011B,
+    green: #00a99d,
+    light: #313183,
+    text: #dbdbdb,
+    text-inverse: rgba(#4A4A4A, 0.3),
+  ),
+  secondary: (
+    main: #cccccc,
+    grey: #dedede,
+    dark: rgba(214, 245, 252, 0.5),
+    base: rgb(7, 6, 8),
+    light: #EBF3FA,
+    text: #484848,
+    text-inverse: #f7f8f9
+  ),
+);
+
+$theme-base: map-merge($theme-default, (
+  relief: (
+    1: #e0e4ed,
+    2: #f6f7f9,
+    3: #fff,
+    4: #fff,
+    5: #fff,
+    6: #fff,
+    7: #fff,
+  ),
+  text: (
+    1: #c7332c,
+    2: #393c49,
+    3: #7e7e7e,
+    4: #566b76,
+    5: #000,
+    6: #000,
+    7: #000,
+  )
+));
+
+$theme-inverse: map-merge($theme-default, (
+  relief: (
+    1: #556474,
+    2: mix(#556474, #687685, 43%),
+    3: #687685,
+    4: #8b8b8b,
+    5: #e9e9e9,
+  ),
+  text: (
+    1: white,
+    2: #e9ecef,
+    3: #bfecff,
+    4: #00a99d,
+    5: #8b8b8b,
+    6: #687685
+  )
+));
+
+$type-font-size-4xs: 10px;
+$type-font-size-3xs: 11px;
+$type-font-size-2xs: 12px;
+$type-font-size-xs: 13px;
+$type-font-size-sm: 14px;
+$type-font-size-md: 15px;
+$type-font-size-2md: 18px;
+$type-font-size-lg: 20px;
+$type-font-size-2xl: 28px;
+$type-font-size-3xl: 36px;
+
+$type-font-size-map: (3xs: $type-font-size-3xs,  4xs: $type-font-size-4xs, 2md: $type-font-size-2md);
+$layout-map: $type-font-size-map;
+
+$type-face-body: Raleway_Regular, Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$MQ_INCLUDE_XS: true;
+$MQ_INCLUDE_XL: true;
+
+
+$space-2xl: var(--space-8);
+$space-3xl: var(--space-10);
+$space-4xl: var(--type-font-size-4xl);
+
+$space-map: (2xl: $space-2xl, 3xl: $space-3xl, 4xl: $space-4xl);
+
+
+$font-weight-group: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  'black': 900
+);
+
+$idents-group: (
+  pl: 'padding-left', 
+  pr: 'padding-right', 
+  pt: 'padding-top', 
+  pb: 'padding-bottom', 
+  pa: 'padding', 
+  ma: 'margin', 
+  ml: 'margin-left',
+  mr: 'margin-right',
+  mt: 'margin-top',
+  mb: 'margin-bottom'
+);
+
+$control-stack-selectors: (
+  '&.d-control-button',
+  '&.um-button',
+  '&.d-control-input',
+);
+

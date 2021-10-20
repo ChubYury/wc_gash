@@ -1,0 +1,239 @@
+body
+  font-family: Raleway, sans-serif
+  fw: 400
+  p
+    fs: 14px
+//************************************
+.title-3
+  d: flex
+  ai: center
+  jc: flex-start
+  w: 100%
+  +mq-md
+    w: 85%
+  +mq-lg
+    w: 65%
+  +mq-xl
+    w: 54%
+  &__
+    &text
+      pa: 10px 0px
+      fs: 10px
+      fw: 800
+      fa: center
+      ft: uppercase
+      color: var(--theme-relief-5)
+      +mq-sm
+        fs: 16px
+      +mq-md
+        fs: 25px
+      &--color
+        color: var(--theme-primary-green)
+  
+.figure
+  pos: relative
+  d: flex
+  ai: center
+  jc: center
+  w: 30%
+  &--
+    &left
+      mr: 5px
+      .figure__line
+        mr: 5px
+    &right
+      f-dir: row-reverse
+      ml: 5px
+      .figure__line
+        ml: 5px
+  &__
+    &line
+      pos: relative
+      h: 5px
+      br-t: 1px solid var(--theme-primary-main)
+      br-b: 1px solid var(--theme-primary-main)
+      w: 100%
+      +mq-md
+        h: 8px
+        br-t: 1px solid var(--theme-primary-main)
+        br-b: 1px solid var(--theme-primary-main)
+
+    &rhombus
+      pos: relative
+      bg: var(--theme-primary-green)
+      trans: rotate(45deg)
+      &--
+        &once
+          w: 5px
+          h: 5px
+          br-radius:1px
+          opacity: 0.5
+          +mq-md
+            w: 10px
+            h: 10px
+        &two
+          w: 7px
+          h: 7px
+          br-radius:2px
+          opacity: 0.8
+          +mq-md
+            w: 13px
+            h: 13px
+        &three
+          w: 10px
+          h: 10px
+          br-radius:3px
+          +mq-md
+            w: 16px
+            h: 16px
+//*********************************************
+
+.icon
+  pos: relative
+  w: 20px
+  h: 20px
+  top: -10px
+  bg: var(--theme-primary-green)
+  br-radius: 2px
+  trans: rotate(45deg)
+  &__
+    &pic
+      pos: relative
+      mt: 2px
+      ml: 4px
+      font-family: ElegantIcons
+      fw: 800
+      fs: 12px
+      color: var(--theme-accent-white)
+      trans: rotate(-45deg)
+      +mq-sm
+        mt: 4px
+        ml: 6px
+        fs: 14px
+      +mq-md
+        mt: 6px
+        ml: 10px
+        fs: 16px
+      +mq-lg
+        mt: 7px
+        ml: 12px
+        fs: 18px
+      +mq-xl
+        mt: 9px
+        ml: 16px
+        fs: 20px
+  +mq-sm
+    w: 30px
+    h: 30px
+    top: -15px
+  +mq-md
+    w: 40px
+    h: 40px
+    top: -20px
+    br-radius: 3px
+  +mq-lg
+    w: 50px
+    h: 50px
+    top: -25px
+  +mq-xl
+    w: 54px
+    h: 54px
+    top: -27px
+    br-radius: 5px
+
+//*************************************
+
+.icon-2
+  d: flex
+  ai: center
+  jc: center
+  pos: relative
+  mb: 40px
+  &__
+    &bg
+      pos: relative
+      w: 40px
+      h: 40px
+      bg: var(--theme-accent-dark-grey)
+      br-radius: 3px
+      trans: rotate(45deg)
+      tr: 0.5s
+    &pic
+      mt: 6px
+      ml: 10px
+      font-family: ElegantIcons
+      fw: 800
+      fs: 16px
+      color: var(--theme-accent-dark-grey)
+      trans: rotate(-45deg)
+
+//*************************************
+
+.btn
+  box-sizing: border-box
+  pa: 16px 15px 15px 15px
+  bg: var(--theme-primary-green)
+  color: var(--theme-accent-white)
+  br: 1px solid var(--theme-primary-green)
+  br-radius: 5px
+  fw: 500
+  fs: 13px
+  ft: uppercase
+  tr: 0.5s
+  &:hover
+    bg: var(--theme-accent-white)
+    color: var(--theme-primary-green)
+    box-shadow: 4px 4px 8px 0px rgba(0, 169, 157, 0.2)
+  &:active
+    box-shadow: none
+    
+//***********slider style*********************
+
+.slick-track
+  d: flex
+
+.slick-list
+  overflow: hidden
+
+.wrap
+  pa: 0px 2px
+
+.control
+  pos: absolute
+  w: 18px
+  h: 18px
+  pa: 0px
+  top: -20%
+  right: 0px
+  br: none
+  br-radius: 2px
+  bg: var(--theme-primary-green)
+  font-family: ElegantIcons
+  fw: 800
+  fs: 13px
+  color: var(--theme-accent-white)
+  tr: 0.5s
+  +mq-sm
+    top: -33%
+  +mq-md
+    w: 20px
+    h: 20px
+    top: -31%
+    fs: 15px
+  +mq-lg
+    w: 25px
+    h: 25px
+    top: -32%
+    fs: 20px
+  +mq-xl
+    w: 30px
+    h: 30px
+    fs: 25px
+    top: -33%
+  &:hover
+    bg: var(--theme-relief-5)
+    box-shadow: 0px 4px 4px rgba(255,255, 255, 0.25)
+  &--prev
+    left: 10px
+  &--next
+    right: 10px

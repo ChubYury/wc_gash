@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/js/main.js"],"names":["window","app","Vue","el"],"mappings":";;;;;;;;;;;;;;;;;;AAAA;;AAEAA,MAAM,CAACC,GAAP,GAAa,IAAIC,eAAJ,CAAQ;AACnBC,IAAE,EAAE;AADe,CAAR,CAAb,C","file":"main.js","sourcesContent":["import Vue from 'vue'\n\nwindow.app = new Vue({\n  el: '#app',\n})\n\n\n\n// WEBPACK FOOTER //\n// ./src/js/main.js"],"sourceRoot":""}
