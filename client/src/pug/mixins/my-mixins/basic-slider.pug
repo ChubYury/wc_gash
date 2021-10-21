@@ -1,0 +1,7 @@
+mixin createBasicSlider(data = [])
+  each element in data  
+    +b.basic-slide
+      +e.img.IMG(src=element.patch alt="photo man" title='photo man')
+      +e.text
+        +e.text-title.H2= element.title
+        +e.text-subtitle.P= element.subtitle

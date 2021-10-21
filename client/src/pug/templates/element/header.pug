@@ -7,8 +7,10 @@ include ../../mixins/index
         +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
       +b.info
         +b.navbar.NAV
-          each name in ['О нас', 'Новости', 'Энциклопедия матрасов', 'Gash Care', 'Контакты']
-            +e.link.A= name
+          +e.list.UL
+            each name in ['О нас', 'Новости', 'Энциклопедия матрасов', 'Gash Care', 'Контакты']
+              +e.item.LI
+                +e.link.A= name
         +e.work
           +e.phone.A #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
           +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
