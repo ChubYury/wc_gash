@@ -1,0 +1,134 @@
+.basic-slider
+  h: 100%
+  pos: relative
+
+  .control
+    &--
+      &prev
+        +mq-lg
+          top: 50%
+          right: 0px
+      &next
+        +mq-lg
+          top: 45%
+          right: 0px
+
+.basic-slide
+  position: relative
+  width: 100%
+  h: 100%
+  &__
+    &img
+      w: 100%
+      h: 100%
+      object-fit: cover
+      object-position: center top
+    &text
+      pos: absolute
+      w: 100%
+      pa: 20px
+      right: 0px
+      bottom: 0px
+      +mq-sm
+        w: 100%
+      +mq-md
+        w: 100%
+      +mq-lg
+        w: 496px
+      +mq-xl
+        w: 600px
+    &text-title  
+      color: var(--theme-accent-white)
+      fw: 700
+      fs: 25px
+      +mq-sm
+        fs: 27px
+      +mq-md
+        fs: 28px
+      +mq-lg
+        fs: 29px
+      +mq-xl
+        fs: 30px
+    &text-subtitle
+      fw: 400
+      fs: 9px
+      color: var(--theme-accent-white)
+      +mq-sm
+        fs: 10px
+      +mq-md
+        fs: 11px
+      +mq-lg
+        fs: 12px
+      +mq-xl
+        fs: 13px
+
+  
+
+.basic-tiles
+  d: flex
+  flex-wrap: wrap
+
+.item
+  pos: relative
+  &__
+    &img
+      w: 100%
+      h: 100%
+    &text
+      pos: absolute
+      max-w: 270px
+      top: 20%
+      left: 10px
+      +mq-md
+        top: 30%
+        left: 30px
+      +mq-lg
+        top: 20%
+        left: 10px
+      +mq-xl
+        top: 30%
+        left: 30px
+      
+    &text-title
+      fw: 700
+      fs: 20px
+      color: var(--theme-text-1)
+      +mq-sm
+        fs: 22px
+      +mq-md
+        fs: 23px
+      +mq-lg
+        fs: 24px
+      +mq-xl
+        fs: 25px
+    &text-subtitle
+      fw: 700
+      fs: 15px
+      color: var(--theme-text-2)
+      +mq-sm
+        fs: 20px
+      +mq-md
+        fs: 23px
+      +mq-lg
+        fs: 24px
+      +mq-xl
+        fs: 25px
+  &--
+    &mod-top
+      w: 100%
+    &mod-left
+      w: 50%
+      +mq-sm
+        w: 40%
+      +mq-lg
+        w: 50%
+      +mq-xl
+        w: 40%
+    &mod-right
+      w: 50%
+      +mq-sm
+        w: 60%
+      +mq-lg
+        w: 50%
+      +mq-xl
+        w: 60%

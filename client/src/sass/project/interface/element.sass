@@ -3,3 +3,44 @@ body
   fw: 400
   p
     fs: 14px
+
+  
+//***********slider style*********************
+.slick-list
+  overflow: hidden
+  h: 100%
+.slick-track
+  d: flex
+  h: 100%
+.slick-slide
+  h: 100%
+  &>div
+    h:100%
+.wrap
+  pa: 0px 2px
+
+.control
+  pos: absolute
+  w: 20px
+  h: 20px
+  pa: 0px
+  bottom: 0%
+  right: 0px
+  br: none
+  //br-radius: 2px
+  bg: var(--theme-text-1)
+  font-family: ElegantIcons
+  fw: 800
+  fs: 13px
+  color: var(--theme-accent-white)
+  tr: 0.5s
+  z-index: 10
+  cursor: pointer
+  &:hover
+    color: var(--theme-text-2)
+    bg: var(--theme-accent-white)
+    //box-shadow: 0px 4px 4px rgba(255,255, 255, 0.25)
+  &--prev
+    right: 52%
+  &--next
+    right: 46%

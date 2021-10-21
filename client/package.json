@@ -20,6 +20,7 @@
     "dev": "npm run watch"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
     "pure-js-validator": "^1.0.1",
     "slick-carousel": "^1.8.1",
     "vue": "^2.6.11"

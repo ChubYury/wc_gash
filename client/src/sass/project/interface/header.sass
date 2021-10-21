@@ -1,26 +1,35 @@
 .head
   d: flex
   f-dir: column
+  flex-wrap: wrap
   ai: center
-  jc: center
+  jc: space-between
+  pa: 10px 0px
+  +mq-sm
+    f-dir: row
   &__
     &logo
       &--
         &img
           w: 100%
-        //object-fit: cover
-        //object-position: top right
-
+        
 .info
   &__
     &work
       d: flex
       f-dir: column
+      +mq-md
+        ai: flex-start
+      +mq-xl
+        f-dir: row
+        ai: flex-end
          
     &phone
+      mr: 10px
       color: var(--theme-text-2)
       fw: 700
       fs: 25px
+      fa: center
       +mq-sm
         fs: 27px
       +mq-md
@@ -44,8 +53,10 @@
       +mq-xl
         fs: 25px
     &time
+      mb: 5px
       fw: 400
       fs: 9px
+      fa: center
       color: var(--theme-text-2)
       +mq-sm
         fs: 10px
@@ -58,11 +69,46 @@
         
 .navbar
   d: flex
-  ai: center
-  jc: center
+  pb: 10px
   &__
+    &list
+      d: flex
+      ai: center
+      jc: center
     &link
       ma: 0px 5px
+      fw: 400
+      fs: 9px
+      color: var(--theme-text-2)
+      cursor: pointer
+      +mq-sm
+        fs: 10px
+      +mq-md
+        fs: 11px
+      +mq-lg
+        fs: 12px
+      +mq-xl
+        fs: 13px
+      &:hover
+        fd: underline
+        
+
+.order
+  d: flex
+  f-dir: column
+  ai: flex-start
+  jc: center
+  +mq-sm
+    f-dir: row
+    w: 100%
+    //jc: center
+  +mq-md
+    f-dir: column
+    jc: space-between
+    w: auto
+  &__
+    &item
+      ma: 5px 0px 5px 5px
       fw: 400
       fs: 9px
       color: var(--theme-text-2)
@@ -74,11 +120,7 @@
         fs: 12px
       +mq-xl
         fs: 13px
-
-.order
-  &__
-    &item
-      ma: 10px 0px
       &--
         &color
+          mr: 3px
           color: var(--theme-text-1)
