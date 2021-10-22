@@ -3,14 +3,18 @@
   pos: relative
 
   .control
+    +mq-lg
+      w: 40px
+      h: 40px
+      fs: 15px
     &--
       &prev
         +mq-lg
-          top: 50%
+          top: 52%
           right: 0px
       &next
         +mq-lg
-          top: 45%
+          top: 43%
           right: 0px
 
 .basic-slide
@@ -67,7 +71,7 @@
 .basic-tiles
   d: flex
   flex-wrap: wrap
-
+  h: 100%
 .item
   pos: relative
   &__
