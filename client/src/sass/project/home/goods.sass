@@ -1,11 +1,267 @@
+.goods-title
+  w: 100%
+  pt: 60px
+  color: var(--theme-text-2)
+  fw: 700
+  fs: 20px
+  +mq-sm
+    fs: 22px
+  +mq-lg
+    fs: 25px
+.goods-slider
+  pos: relative
+  pt: 20px
+  pb: 60px
+
+  .control
+    top: -20px
+    &:hover
+      box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
+    &:active
+      box-shadow: none
+      
+    +mq-lg
+      top: -40px
+      w: 40px
+      h: 40px
+      fs: 15px
+    &--
+      &prev
+        right: 40px
+        +mq-lg
+          right: 80px
+      &next
+        right: 10px
+        +mq-lg
+          right: 20px
+.goods-slide
+  d: flex
+  flex-wrap: wrap
+  jc: space-between
+  &__
+    &description
+      w: 100%
+      mb: 20px
+      pa: 20px 0px
+      br-t: 5px solid var(--theme-text-3)
+      br-b: 5px solid var(--theme-text-3)
+      order: 2
+      +mq-sm
+        w: 45%
+        ml: 10px
+      +mq-xl
+        w: 28%
+        order: 3
+    &description-title
+      pb: 10px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 12px
+      +mq-sm
+        fs: 15px
+      +mq-lg
+        fs: 17px
+    &description-text
+      color: var(--theme-text-4)
+      fw: 400
+      fs: 9px
+      +mq-sm
+        fs: 12px
+      +mq-lg
+        fs: 13px
+    
+
+.goods-pic
+  pos: relative
+  w: 100%
+  mb: 20px
+  order: 1
+  +mq-sm
+    w: 50%
+    ml: 10px
+  +mq-md
+    height: 250px
+  +mq-xl
+    w: 28%
+  &__
+    &photo
+      w: 100%
+      h: 100%
+      object-fit: cover
+      object-position: center
+    &stock
+      pos: absolute
+      w: 25px
+      h: 25px
+      left: 15px
+      pt: 7px
+      bg: var(--theme-accent-white)
+      fw: 700
+      fs: 8px
+      fa: center
+      +mq-sm
+        w: 30px
+        h: 30px
+        pt: 8px
+        fs: 10px
+      +mq-lg
+        w: 40px
+        h: 40px
+        pt: 12px
+        fs: 12px
+      &--
+        &hit
+          top: 10px
+          color: var(--theme-text-1)
+        &new
+          top: 60px
+          color: var(--theme-text-5)
+        &rate
+          top: 110px
+          pt: 4px
+          color: var(--theme-text-2)
+          fs: 15px
+    &rating
+      pos: absolute
+      w: 100%
+      bottom: 0px
+      d: flex
+      jc: space-between
+    &rating-icon
+      &--
+        &color
+          w: 14px
+          h: 14px
+          +mq-sm
+            w: 16px
+            h: 16px
+          +mq-lg
+            w: 18px
+            h: 18px
+        &transparent
+          w: 14px
+          h: 14px
+          +mq-sm
+            w: 16px
+            h: 16px
+          +mq-lg
+            w: 18px
+            h: 18px
+    &rating-text
+      pt: 3px
+      pr: 5px
+      color: var(--theme-accent-white)
+      font-size: 8px
+      +mq-sm
+        fs: 10px
+      +mq-lg
+        fs: 12px
 .goods-table
+  w: 100%
+  order: 3
+  //+mq-sm
+  //  w: 50%
+  +mq-xl
+    w: 40%
+    ml: 10px
+    order: 2
   .ds-caption
     &--
-      &mod-justify
-        text-align: justify
+      &table
+        color: var(--theme-text-2)
+        fw: 700
+        fs: 15px
+        +mq-sm
+          fs: 18px
+        +mq-lg
+          fs: 20px
+
+      &between
+        d: flex
+        jc: space-between
       &bold
-        pos: relative
-      &revers
-        w: auto
-        right: 0px
-        pos: relative
+        color: var(--theme-text-2)
+        fw: 700
+        fs: 10px
+        +mq-sm
+          fs: 13px
+        +mq-lg
+          fs: 14px
+      &medium
+        fw: 400
+      &light
+        color: var(--theme-text-3)
+        fw: 400
+        fs: 9px
+        +mq-sm
+          fs: 12px
+        +mq-lg
+          fs: 13px
+  .ds-table
+    &__
+      &cell
+        &--
+          &head
+            fw: 700
+            fs: 10px
+            +mq-sm
+              fs: 13px
+            +mq-lg
+              fs: 14px
+          &head-secondary
+            pl: 20px
+          &head-big
+            fa: end
+            fs: 12px
+            +mq-sm
+              fs: 15px
+            +mq-lg
+              fs: 17px
+          &column-primary
+            pos: relative
+            w: 20px
+            pl: 4px
+            //знаю что костыль но у меня не сработал border-spacing
+            br-b: 7px solid var(--theme-accent-white)
+            color: var(--theme-text-2)
+            bg: var(--theme-relief-1)
+            fw: 700
+            fs: 10px
+            fa: center
+            +mq-sm
+              fs: 13px
+            +mq-lg
+              fs: 14px
+
+          &column-secondary
+            pl: 20px
+            br-b: 7px solid var(--theme-accent-white)
+            color: var(--theme-text-2)
+            bg: var(--theme-relief-2)
+            fw: 400
+            fs: 10px
+            +mq-sm
+              fs: 13px
+            +mq-lg
+              fs: 14px
+          &medium-delete
+            fw: 400
+            fd: line-through
+            fa: end
+      &text-medium
+        fw: 400
+
+.triangle
+  position: absolute
+  width: 0
+  height: 0
+  top: 8px
+  right: -8px
+  border-top: 7px solid transparent
+  border-left: 9px solid var(--theme-relief-1)
+  border-bottom: 7px solid transparent
+  z-index: 5
+  +mq-sm
+    top: 10px
+  +mq-lg
+    top: 11px

@@ -1,17 +1,119 @@
 include ../../mixins/index
-+b.goods-wrap
++b.goods-wrap.SECTION
   +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
-    +b.goods
-      +b.goods-pic
-        +e.photo
-        +e.stock.P
-        +e.rating
-          +e.rating-icon
-            +e.rating-icon--color.IMG
-            +e.rating-icon--transparent.IMG
-          +e.rating-text
-      +b.goods-table
-        +b.ds-table
-          +e.caption.CAPTION
-            +b.ds-caption.--size_3 Матрас Дабл Тучка Мемо
-            +b.ds-caption.--size_6 #[+b.ds-caption--bold.SPAN Серия:] Детские беспружинные матрасы #[+b.ds-caption--revers.SPAN Артикул: 004]
+    +b.goods-title.H2 Наши  лучшие матрасы
+    +b.goods-slider
+      +b.slide-wrap
+        +b.goods-slide
+          +b.goods-pic
+            +e.photo.IMG(src="../../static/img/home/goods-img-1.jpg" alt="mattress" title='mattress')
+            +e.stock.--hit.P hit
+            +e.stock.--new.P new
+            +e.stock.--rate.P %
+            +e.rating
+              +e.rating-icon
+                +e.rating-icon--color.IMG(src="../../static/img/home/icon-star-color.png" alt="icon-star-color")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+              +e.rating-text.P 4.5 из 5 на основе 201 опроса (ов)
+          +b.goods-table
+            +b.ds-table.TABLE
+              +e.caption.CAPTION
+                +b.ds-caption.--table Матрас Дабл Тучка Мемо
+                +b.ds-caption.--between
+                  +b.ds-caption--bold.SPAN Серия: #[+b.ds-caption--medium.SPAN Детские беспружинные матрасы] 
+                  +b.ds-caption--light.SPAN Артикул: 004
+              +e.head.THEAD
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Стороны:
+                  +e.cell.--head.--head-secondary.TH Прогиб:
+                  +e.cell.--head.--head-secondary.TH Жесткость:
+              +b.TBODY
+                +e.row.TR
+                  +e.cell.--column-primary.TD 1 #[+b.triangle]
+                  +e.cell.--column-secondary.TD 2.9 см
+                  +e.cell--column-secondary.TD 4.2 из 5.0 (умерено жестко)
+                +e.row.TR
+                  +e.cell.--column-primary.TD 2 #[+b.triangle]
+                  +e.cell.--column-secondary.TD 3.9 см
+                  +e.cell.--column-secondary.TD 3.6 из 5.0(среднежестко)
+            +b.ds-table.TABLE
+              +b.TBODY     
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Высота: #[+e.text-medium.SPAN см]
+                  +e.cell.--head.TH Объем: #[+e.text-medium.SPAN 0.3 м. куб.]
+                  +e.cell.--head.--medium-delete.TH Старая цена:7500 грн
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Вес: #[+e.text-medium.SPAN 0.00 кг]
+                  +e.cell.--head.TH Тип: #[+e.text-medium.SPAN Беспружинник]
+                  +e.cell.--head.--head-big.TH 6 500 грн
+          +e.description
+            +e.description-title.H3 Описание длинный заголовок лучшие матрасы
+            +e.description-text.P Как принято считать, многие известные личности 
+                                | представлены в исключительно положительном свете. 
+                                | Также как социально-экономическое развитие, в своем 
+                                | классическом представлении, допускает внедрение 
+                                | своевременного выполнения сверхзадачи. Имеется спорная 
+                                | точка зрения, гласящая примерно следующее: тщательные 
+                                | исследования конкурентов освещают чрезвычайно интересные 
+                                | особенности картины в целом, однако конкретные выводы, 
+                                | разумеется, описаны максимально подробно.
+      +b.slide-wrap
+        +b.goods-slide
+          +b.goods-pic
+            +e.photo.IMG(src="../../static/img/home/goods-img-1.jpg" alt="mattress" title='mattress')
+            +e.stock.--hit.P hit
+            +e.stock.--new.P new
+            +e.stock.--rate.P %
+            +e.rating
+              +e.rating-icon
+                +e.rating-icon--color.IMG(src="../../static/img/home/icon-star-color.png" alt="icon-star-color")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+              +e.rating-text.P 4.5 из 5 на основе 201 опроса (ов)
+          +b.goods-table
+            +b.ds-table.TABLE
+              +e.caption.CAPTION
+                +b.ds-caption.--table Матрас Дабл Тучка Мемо
+                +b.ds-caption.--between
+                  +b.ds-caption--bold.SPAN Серия: #[+b.ds-caption--medium.SPAN Детские беспружинные матрасы] 
+                  +b.ds-caption--light.SPAN Артикул: 004
+              +e.head.THEAD
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Стороны:
+                  +e.cell.--head.--head-secondary.TH Прогиб:
+                  +e.cell.--head.--head-secondary.TH Жесткость:
+              +b.TBODY
+                +e.row.TR
+                  +e.cell.--column-primary.TD 1 #[+b.triangle]
+                  +e.cell.--column-secondary.TD 2.9 см
+                  +e.cell--column-secondary.TD 4.2 из 5.0 (умерено жестко)
+                +e.row.TR
+                  +e.cell.--column-primary.TD 2 #[+b.triangle]
+                  +e.cell.--column-secondary.TD 3.9 см
+                  +e.cell.--column-secondary.TD 3.6 из 5.0(среднежестко)
+            +b.ds-table.TABLE
+              +b.TBODY     
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Высота: #[+e.text-medium.SPAN см]
+                  +e.cell.--head.TH Объем: #[+e.text-medium.SPAN 0.3 м. куб.]
+                  +e.cell.--head.--medium-delete.TH Старая цена:7500 грн
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Вес: #[+e.text-medium.SPAN 0.00 кг]
+                  +e.cell.--head.TH Тип: #[+e.text-medium.SPAN Беспружинник]
+                  +e.cell.--head.--head-big.TH 6 500 грн
+          +e.description
+            +e.description-title.H3 Описание длинный заголовок лучшие матрасы
+            +e.description-text.P Как принято считать, многие известные личности 
+                                | представлены в исключительно положительном свете. 
+                                | Также как социально-экономическое развитие, в своем 
+                                | классическом представлении, допускает внедрение 
+                                | своевременного выполнения сверхзадачи. Имеется спорная 
+                                | точка зрения, гласящая примерно следующее: тщательные 
+                                | исследования конкурентов освещают чрезвычайно интересные 
+                                | особенности картины в целом, однако конкретные выводы, 
+                                | разумеется, описаны максимально подробно.

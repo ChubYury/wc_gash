@@ -7766,34 +7766,17 @@ var quotesOption = {
   slidesToScroll: 1,
   mobileFirst: true
 };
-var clientOption = {
+var goodsOption = {
   arrows: true,
   prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
   nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
   dots: false,
   slidesToShow: 1,
   slidesToScroll: 1,
-  mobileFirst: true,
-  responsive: [{
-    breakpoint: 768,
-    settings: {
-      slidesToShow: 2
-    }
-  }, {
-    breakpoint: 992,
-    settings: {
-      slidesToShow: 3
-    }
-  }, {
-    breakpoint: 1200,
-    settings: {
-      slidesToShow: 4
-    }
-  }]
+  mobileFirst: true
 };
 (0, _jquery["default"])('.single-item').slick(slickOption);
-(0, _jquery["default"])('.cit-slider').slick(quotesOption);
-(0, _jquery["default"])('.slider-clients').slick(clientOption);
+(0, _jquery["default"])('.goods-slider').slick(goodsOption);
 
 /***/ }),
 /* 12 */
