@@ -5,6 +5,7 @@
   &__
     &bar
       pos: relative
+      bg: var(--theme-relief-2)
       &--
         &big
           w: 100%
@@ -44,16 +45,10 @@
       w: 80%
       mb: 15px
       color: var(--theme-text-2)
-      fw: 700
-      fs: 10px
       tr: .5s
-      +mq-sm
-        fs: 12px
-      +mq-xl
-        fs: 15px
       &--
         &big
-          top: 15px
+          top: 5px
           left: 10px
           pos: absolute
           fw: 700
@@ -65,7 +60,7 @@
           +mq-md
             top: 40px
             left: 30px
-            fs: 22px  
+            fs: 22px
           +mq-lg
             top: 50px
             left: 40px
@@ -78,8 +73,15 @@
             fs: 21px
           +mq-md
             fs: 22px  
-          +mq-xl
+          +mq-lg
             fs: 25px
+        &min
+          fw: 700
+          fs: 10px
+          +mq-sm
+            fs: 12px
+          +mq-xl
+            fs: 15px
     &bar-icon
       w: 20px
       h: 20px
