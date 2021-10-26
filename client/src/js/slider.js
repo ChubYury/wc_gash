@@ -26,7 +26,7 @@ const quotesOption = {
   mobileFirst: true,
 };
 
-const clientOption = {
+const goodsOption = {
 
   arrows: true,
   prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
@@ -36,28 +36,8 @@ const clientOption = {
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-      },
-    },
-  ],
 }
 
 $('.single-item').slick(slickOption);
-$('.cit-slider').slick(quotesOption);
-$('.slider-clients').slick(clientOption);
+$('.goods-slider').slick(goodsOption);
+/* $('.slider-clients').slick(clientOption); */

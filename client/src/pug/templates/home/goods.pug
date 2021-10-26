@@ -1,17 +1,78 @@
 include ../../mixins/index
-+b.goods-wrap
+
+-
+  const goodsData = [
+        {
+          goodsName:'Матрас Дабл ',
+          goodsSerial:'Детские беспружинные матрасы',
+          goodsVendorCode:'004',
+          goodsRating: 3,
+          table:[
+            {
+              goodsFlexure:'2.9 см',
+              goodsRigidity:'4.2 из 5.0 (умерено жестк)',
+            },
+            {
+              goodsFlexure:'3.9 см',
+              goodsRigidity:'3.6 из 5.0(среднежесткo)',
+            },
+          ],
+          goodsHeight:'см',
+          goodsBulk:'0.3 м. куб.',
+          goodsOldPrice:'7500',
+          goodsWeight:'0.00 кг',
+          goodsType:'Беспружинник',
+          goodsNewPrice:'6 500 грн',
+        },
+        {
+          goodsName:'Тучка Мемо',
+          goodsSerial:'Детские беспружинные матрасы',
+          goodsVendorCode:'004',
+          goodsRating: 2,
+          table:[
+            {
+              goodsFlexure:'2.9 см',
+              goodsRigidity:'4.2 из 5.0 (умерено жестк)',
+            },
+            {
+              goodsFlexure:'3.9 см',
+              goodsRigidity:'3.6 из 5.0(среднежесткo)',
+            },
+          ],
+          goodsHeight:'см',
+          goodsBulk:'0.3 м. куб.',
+          goodsOldPrice:'7500',
+          goodsWeight:'0.00 кг',
+          goodsType:'Беспружинник',
+          goodsNewPrice:'6 500 грн',
+        },
+        {
+          goodsName:'Матрас Дабл Тучка Мемо',
+          goodsSerial:'Детские беспружинные матрасы',
+          goodsVendorCode:'004',
+          goodsRating: 5,
+          table:[
+            {
+              goodsFlexure:'2.9 см',
+              goodsRigidity:'4.2 из 5.0 (умерено жестк)',
+            },
+            {
+              goodsFlexure:'3.9 см',
+              goodsRigidity:'3.6 из 5.0(среднежесткo)',
+            },
+          ],
+          goodsHeight:'см',
+          goodsBulk:'0.3 м. куб.',
+          goodsOldPrice:'7500',
+          goodsWeight:'0.00 кг',
+          goodsType:'Беспружинник',
+          goodsNewPrice:'6 500 грн',
+        },
+      ]
+
++b.goods-wrap.SECTION
   +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
-    +b.goods
-      +b.goods-pic
-        +e.photo
-        +e.stock.P
-        +e.rating
-          +e.rating-icon
-            +e.rating-icon--color.IMG
-            +e.rating-icon--transparent.IMG
-          +e.rating-text
-      +b.goods-table
-        +b.ds-table
-          +e.caption.CAPTION
-            +b.ds-caption.--size_3 Матрас Дабл Тучка Мемо
-            +b.ds-caption.--size_6 #[+b.ds-caption--bold.SPAN Серия:] Детские беспружинные матрасы #[+b.ds-caption--revers.SPAN Артикул: 004]
+    +b.goods-title.H2 Наши  лучшие матрасы
+    +b.goods-slider
+      +createGoodsSlider(goodsData)
+      
