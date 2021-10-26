@@ -1,0 +1,58 @@
+mixin createGoodsSlider(data = [])
+  each element in data 
+    +b.slide-wrap
+        +b.goods-slide
+          +b.goods-pic
+            +e.photo.IMG(src="../../static/img/home/goods-img-1.jpg" alt="mattress" title='mattress')
+            +e.stock.--hit.P hit
+            +e.stock.--new.P new
+            +e.stock.--rate.P %
+            +e.rating
+              +e.rating-icon
+                - let countStar = 0;
+                while countStar < 5
+                  if countStar < element.goodsRating
+                    +e.rating-icon--color.IMG(src="../../static/img/home/icon-star-color.png" alt="icon-star-color")
+                  else
+                    +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                  - countStar += 1;
+              +e.rating-text.P 4.5 из 5 на основе 201 опроса (ов)
+          +b.goods-table
+            +b.ds-table.TABLE
+              +e.caption.CAPTION
+                +b.ds-caption.--table= element.goodsName
+                +b.ds-caption.--between
+                  +b.ds-caption--bold.SPAN Серия: #[+b.ds-caption--medium.SPAN= element.goodsSerial] 
+                  +b.ds-caption--light.SPAN Артикул: #[+b.SPAN= element.goodsVendorCode]
+              +e.head.THEAD
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Стороны:
+                  +e.cell.--head.--head-secondary.TH Прогиб:
+                  +e.cell.--head.--head-secondary.TH Жесткость:
+              +b.TBODY
+                each elementTable in element.table
+                  +e.row.TR
+                    +e.cell.--column-primary.TD 1 #[+b.triangle]
+                    +e.cell.--column-secondary.TD= elementTable.goodsFlexure
+                    +e.cell--column-secondary.TD= elementTable.goodsRigidity
+            +b.ds-table.TABLE
+              +b.TBODY     
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Высота: #[+e.text-medium.SPAN= element.goodsHeight]
+                  +e.cell.--head.TH Объем: #[+e.text-medium.SPAN= element.goodsBulk]
+                  +e.cell.--head.--medium-delete.TH Старая цена:#[+b.SPAN= element.goodsOldPrice]
+                +e.row.--relief.TR
+                  +e.cell.--head.TH Вес: #[+e.text-medium.SPAN= element.goodsWeight]
+                  +e.cell.--head.TH Тип: #[+e.text-medium.SPAN= element.goodsType]
+                  +e.cell.--head.--head-big.TH= element.goodsNewPrice
+          +e.description
+            +e.description-title.H3 Описание длинный заголовок лучшие матрасы
+            +e.description-text.P Как принято считать, многие известные личности 
+                                | представлены в исключительно положительном свете. 
+                                | Также как социально-экономическое развитие, в своем 
+                                | классическом представлении, допускает внедрение 
+                                | своевременного выполнения сверхзадачи. Имеется спорная 
+                                | точка зрения, гласящая примерно следующее: тщательные 
+                                | исследования конкурентов освещают чрезвычайно интересные 
+                                | особенности картины в целом, однако конкретные выводы, 
+                                | разумеется, описаны максимально подробно.
