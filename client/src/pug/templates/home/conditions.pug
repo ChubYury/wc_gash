@@ -1,1 +1,47 @@
 include ../../mixins/index
+
+-
+  const conditionsData = [
+        {
+          conPath: '../static/img/home/icon-finger.png',
+          conPath2: '../static/img/home/icon-finger-white.png',
+          conTitle:'Уникальная методика точного подбора жесткости',
+        },
+        {
+          conPath: '../static/img/home/icon-people-chat.png',
+          conPath2: '../static/img/home/icon-people-chat-white.png',
+          conTitle:'Личная консультация мастера матрасов',
+        },
+        {
+          conPath: '../static/img/home/icon-percent.png',
+          conPath2: '../static/img/home/icon-percent-white.png',
+          conTitle:'Для старта работы аванс 50%',
+        },
+        {
+          conPath: '../static/img/home/icon-calendar.png',
+          conPath2: '../static/img/home/icon-calendar-white.png',
+          conTitle:'Изготовление до 10 рабочих дней',
+        },
+        {
+          conPath: '../static/img/home/icon-box.png',
+          conPath2: '../static/img/home/icon-box-white.png',
+          conTitle:'Бесплатная доставка по Киеву',
+        },
+        {
+          conPath: '../static/img/home/icon-car.png',
+          conPath2: '../static/img/home/icon-car-white.png',
+          conTitle:'Отправляем по всей Украине',
+        },
+      ]
+
+
++b.conditions-wrap.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.conditions
+      +e.title.title-secondary.H2 Условия работы
+      each element in conditionsData
+        +e.bar
+          +e.bar-icon.IMG(src=element.conPath alt="conditions bar")
+          +e.bar-icon.--white.IMG(src=element.conPath2 alt="conditions bar")
+          +e.bar-title.H4= element.conTitle
+        

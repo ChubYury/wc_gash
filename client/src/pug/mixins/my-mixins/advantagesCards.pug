@@ -1,0 +1,7 @@
+mixin createAdvantagesCards(data = [])
+  each element in data
+    +e.bar.--small
+      +e.bar-title.--min= element.adTitle
+      +e.bar-icon.IMG(src=element.adPath alt="advantages bar")
+      +e.bar-icon.--white.IMG(src=element.adPath2 alt="advantages bar")
+      +e.bar-text= element.adText 

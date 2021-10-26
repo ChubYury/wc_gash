@@ -1,0 +1,63 @@
+.conditions
+  pa:40px 0px
+  d: flex
+  jc: space-around
+  flex-wrap: wrap
+  &__
+    &title
+      w: 100%
+      pl: 20px
+      +mq-md
+        pl: 40px
+      +mq-xl
+        pl: 20px
+    &bar
+      d: flex
+      f-dir: column
+      ai: center
+      jc: center
+      w: 170px
+      ma: 10px 5px
+      pa: 24px 24px 25px 23px
+      box-shadow: -10px 30px 29px rgba(86, 107, 118, 0.21)
+      tr: .5s
+      cursor: pointer
+      +mq-md
+        ma: 10px 10px
+      +mq-lg
+        ma: 10px 40px
+      +mq-xl
+        ma: 10px 10px
+      &:hover
+        bg: var(--theme-text-1)
+        
+        .conditions__bar-title
+          color: var(--theme-accent-white)
+        .conditions__bar-text
+          color: var(--theme-accent-white)
+        .conditions__bar-icon
+          d: none
+        .conditions__bar-icon--white
+          d: block
+          
+    &bar-icon
+      w: 19px
+      h: 18px
+      mb: 25px
+      +mq-md
+        w: 39px
+        h: 38px
+      &--
+        &white
+          mb: 25px
+          d: none
+    &bar-title
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 8px
+      fa: center
+      tr: .5s
+      +mq-sm
+        fs: 10px
+      +mq-xl
+        fs: 13px
