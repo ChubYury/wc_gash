@@ -1,0 +1,100 @@
+.advantages
+  d: flex
+  jc: space-around
+  flex-wrap: wrap
+  &__
+    &bar
+      pos: relative
+      &--
+        &big
+          w: 100%
+          pa: 5px
+          +mq-md
+            w: 60%
+        &small
+          d: flex
+          flex-wrap: wrap
+          jc: space-between
+          w: 100%
+          ma: 10px
+          pa:10px
+          tr: .5s
+          cursor: pointer
+          +mq-sm
+            w: 45%
+          +mq-md
+            w: 27%
+            pa:15px
+          &:hover
+            bg: var(--theme-text-1)
+            
+            .advantages__bar-title
+              color: var(--theme-accent-white)
+            .advantages__bar-text
+              color: var(--theme-accent-white)
+            .advantages__bar-icon
+              d: none
+            .advantages__bar-icon--white
+              d: block
+              filter: drop-shadow(2px 2px 0px #393c49)
+    &bar-img
+      w: 100%
+      h: 100%
+    &bar-title
+      w: 80%
+      mb: 15px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 10px
+      tr: .5s
+      +mq-sm
+        fs: 12px
+      +mq-xl
+        fs: 15px
+      &--
+        &big
+          top: 15px
+          left: 10px
+          pos: absolute
+          fw: 700
+          fs: 20px
+          +mq-sm
+            top: 30px
+            left: 25px
+            fs: 21px
+          +mq-md
+            top: 40px
+            left: 30px
+            fs: 22px  
+          +mq-lg
+            top: 50px
+            left: 40px
+            fs: 25px
+        &color
+          color: var(--theme-text-1)
+          fw: 700
+          fs: 20px
+          +mq-sm
+            fs: 21px
+          +mq-md
+            fs: 22px  
+          +mq-xl
+            fs: 25px
+    &bar-icon
+      w: 20px
+      h: 20px
+      opacity: 0.8
+      filter: drop-shadow(3px 3px 0px #393c49)
+    &bar-icon--white
+      d: none
+    &bar-text
+      width: 100%
+      color: var(--theme-text-4)
+      fw: 400
+      fs: 8px
+      tr: .5s
+      +mq-sm
+        fs: 10px
+      +mq-xl
+        fs: 13px
+
