@@ -12,9 +12,9 @@ mixin createGoodsSlider(data = [])
                 - let countStar = 0;
                 while countStar < 5
                   if countStar < element.goodsRating
-                    +e.rating-icon--color.IMG(src="../../static/img/home/icon-star-color.png" alt="icon-star-color")
+                    +e.rating-icon--color.IMG(src="../static/img/home/icon-star-color.png" alt="icon-star-color")
                   else
-                    +e.rating-icon--transparent.IMG(src="../../static/img/home/icon-star.png" alt="icon-star")
+                    +e.rating-icon--transparent.IMG(src="../static/img/home/icon-star.png" alt="icon-star")
                   - countStar += 1;
               +e.rating-text.P 4.5 из 5 на основе 201 опроса (ов)
           +b.goods-table

@@ -1,1 +1,61 @@
 include ../../mixins/index
+
+-
+  const advantagesData = [
+        {
+          adTitle:'Ремонтируем некачественные фабричные матрасы',
+          adPath: '../static/img/home/icon-scissors.png',
+          adPath2: '../static/img/home/icon-scissors-white.png',
+          adText:'(перешиваем чехлы, вшиваем молнии, повышаем жесткость, укрепляем периметр, приводим к своим стандартам сна)',
+        },
+        {
+          adTitle:'Заботимся через систему  Gash Care',
+          adPath: '../static/img/home/icon-heart.png',
+          adPath2: '../static/img/home/icon-heart-white.png',
+          adText:'мы создаем и оттачиваем реальную аналитическую систему удовольствия  клиентов',
+        },
+        {
+          adTitle:'Открываем сокровенное сокровенные',
+          adPath: '../static/img/home/icon-info.png',
+          adPath2: '../static/img/home/icon-info-white.png',
+          adText:'технические тайны в нашей Энциклопедии матрасов, ручаемся - ее наполнение и качество подачи информации Вас приятно удивит',
+        },
+        {
+          adTitle:'Имеем мощнейшую YouTube библиотеку',
+          adPath: '../static/img/home/icon-youtube.png',
+          adPath2: '../static/img/home/icon-youtube-white.png',
+          adText:'такого обилия высококачественной информации по теме матрасов Вы еще не видели!',
+        },
+        {
+          adTitle:'Корректируем неудачно подобранную жесткость',
+          adPath: '../static/img/home/icon-leaf.png',
+          adPath2: '../static/img/home/icon-leaf-white.png',
+          adText:'(смягчаем, повышаем жесткость, улучшаем комфорт, выстраиваем качественный пирог ортопедического комфорта), наши матрасы - ЗА СВОЙ СЧЕТ',
+        },
+        {
+          adTitle:'Прямой контакт с мастером с мастером матрасов',
+          adPath: '../static/img/home/icon-chat.png',
+          adPath2: '../static/img/home/icon-chat-white.png',
+          adText:'создателем мастерской ЛИЧНО = матрас из первых рук от производителя',
+        },
+        {
+          adTitle:'Гарантия 5 лет на ЛЮБУЮ претензию',
+          adPath: '../static/img/home/icon-shield.png',
+          adPath2: '../static/img/home/icon-shield-white.png',
+          adText:'решаем любую проблему вплоть до возврата денег без лишних вопросов - в нашей обойме исключительно довольные клиенты!',
+        },
+      ]
+
++b.advantages-wrap.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.advantages
+      +e.bar.--big
+        +e.bar-img.IMG(src="../static/img/home/advant-img-1.jpg" alt="advantages bar")
+        +e.bar-title.--big.H3 #[+e.bar-title.--color Чем мы лучше?] #[+b.BR] Наши особенные особенности
+      each element in advantagesData
+        +e.bar.--small
+          +e.bar-title= element.adTitle
+          +e.bar-icon.IMG(src=element.adPath alt="advantages bar")
+          +e.bar-icon.--white.IMG(src=element.adPath2 alt="advantages bar")
+          +e.bar-text= element.adText
+
