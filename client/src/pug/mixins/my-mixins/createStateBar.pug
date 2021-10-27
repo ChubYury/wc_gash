@@ -1,0 +1,6 @@
+mixin createStateBar(data = [])
+  each element in data
+    +e.bar
+      +e.bar-icon.IMG(src=element.conPath alt="conditions bar")
+      +e.bar-icon.--white.IMG(src=element.conPath2 alt="conditions bar")
+      +e.bar-title.H4= element.conTitle

@@ -14,18 +14,6 @@ const slickOption = {
   mobileFirst: true,
 }
 
-const quotesOption = {
-
-  arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
-
-  dots: false,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  mobileFirst: true,
-};
-
 const goodsOption = {
 
   arrows: true,
@@ -38,6 +26,46 @@ const goodsOption = {
   mobileFirst: true,
 }
 
+const blogPrimaryOption = {
+  arrows: true,
+  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 563,
+      settings: {
+        arrows: false,
+        asNavFor: '.slider-secondary',
+        fade: true,
+      },
+    },
+  ],
+}
+
+const blogSecondaryOption = {
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 563,
+      settings: {
+        arrows: true,
+        prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
+        nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: '.slider-primary',
+        dots: false,
+        focusOnSelect: true,
+      },
+    },
+  ],
+}
+
 $('.single-item').slick(slickOption);
 $('.goods-slider').slick(goodsOption);
+$('.slider-primary').slick(blogPrimaryOption);
+$('.slider-secondary').slick(blogSecondaryOption);
 /* $('.slider-clients').slick(clientOption); */
