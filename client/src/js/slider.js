@@ -64,8 +64,44 @@ const blogSecondaryOption = {
   ],
 }
 
+const digestOption = {
+  dots: false,
+  arrows: true,
+  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 563,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+  ],
+}
+
 $('.single-item').slick(slickOption);
 $('.goods-slider').slick(goodsOption);
 $('.slider-primary').slick(blogPrimaryOption);
 $('.slider-secondary').slick(blogSecondaryOption);
-/* $('.slider-clients').slick(clientOption); */
+$('.digest-slider').slick(digestOption);

@@ -1,0 +1,84 @@
+.encyclopedia
+  pa: 20px 0px
+  &__
+    &roof
+      d: flex
+      ai: flex-end
+      jc: space-between
+      pb: 30px
+    &name-btn
+      mr: 200px
+      pb: 3px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 9px
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        fs: 14px
+  .slide
+    d: flex
+    f-dir: column
+    max-w: 270px
+    h: 360px
+    ma: 0px auto
+    bg: var(--theme-relief-2)
+    cursor: pointer
+    +mq-sm
+      max-w: 220px
+    +mq-lg
+      max-w: 270px
+    &:hover
+      box-shadow: 20px 30px 11px rgba(86, 107, 118, 0.21)
+      .slide__title
+        color: var(--theme-text-1)
+    &__
+      &pic
+        h: 150px
+
+  .control
+    top: -40px
+    z-index: 1000
+    &:hover
+      box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
+    &:active
+      box-shadow: none
+    +mq-lg
+      top: -60px
+      w: 40px
+      h: 40px
+      fs: 15px
+    &--
+      &prev
+        right: 40px
+        +mq-lg
+          right: 80px
+      &next
+        right: 10px
+        +mq-lg
+          right: 20px
+
+.digest-slider
+  pos: relative
+  &__
+    &wrap
+      pb: 40px
+
+.btn
+  pos: relative
+  w: 12px
+  h: 9px
+  br: none
+  bg: var(--theme-accent-white)
+  &__
+    line
+      w: 100px
+      h: 2px
+      bg: var(--theme-text-1)
+      &--
+        &top
+          top: 0%
+        &center
+          top: 50%
+        &bottom
+          top: 100%
