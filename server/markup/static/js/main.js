@@ -7757,15 +7757,6 @@ var slickOption = {
   slidesToScroll: 1,
   mobileFirst: true
 };
-var quotesOption = {
-  arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
-  dots: false,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  mobileFirst: true
-};
 var goodsOption = {
   arrows: true,
   prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
@@ -7775,8 +7766,42 @@ var goodsOption = {
   slidesToScroll: 1,
   mobileFirst: true
 };
+var blogPrimaryOption = {
+  arrows: true,
+  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  responsive: [{
+    breakpoint: 563,
+    settings: {
+      arrows: false,
+      asNavFor: '.slider-secondary',
+      fade: true
+    }
+  }]
+};
+var blogSecondaryOption = {
+  mobileFirst: true,
+  responsive: [{
+    breakpoint: 563,
+    settings: {
+      arrows: true,
+      prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
+      nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      asNavFor: '.slider-primary',
+      dots: false,
+      focusOnSelect: true
+    }
+  }]
+};
 (0, _jquery["default"])('.single-item').slick(slickOption);
 (0, _jquery["default"])('.goods-slider').slick(goodsOption);
+(0, _jquery["default"])('.slider-primary').slick(blogPrimaryOption);
+(0, _jquery["default"])('.slider-secondary').slick(blogSecondaryOption);
 
 /***/ }),
 /* 12 */

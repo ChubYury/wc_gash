@@ -1,0 +1,157 @@
+.blog-wrap
+  bg: var(--theme-relief-2)
+  pa: 20px 0px
+.blog
+  d: flex
+  flex-wrap: wrap
+  jc: space-between
+  &__
+    &title
+      w: 100%
+      mb: 20px
+    
+    
+  .control
+    top: -40px
+    z-index: 1000
+    &:hover
+      box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
+    &:active
+      box-shadow: none
+    +mq-sm
+      top: -454px
+    +mq-md
+      top: -40px
+    +mq-lg
+      top: -60px
+      w: 40px
+      h: 40px
+      fs: 15px
+    &--
+      &prev
+        right: 40px
+        +mq-lg
+          right: 80px
+      &next
+        right: 10px
+        +mq-lg
+          right: 20px
+
+
+.slider-primary
+  w: 100%
+  position: relative
+  +mq-md
+    w: 48%
+  &__
+    &wrap
+      h: 100%
+      pb: 40px
+      
+  .slide
+    flex-wrap: wrap
+    h: 390px
+    &:hover
+      box-shadow: none
+      .slide__title
+        color: var(--theme-text-2)
+    &__
+      &pic
+        w: 100%
+        h: 50%
+        +mq-sm
+          w: 50%
+          h:100%
+      &title
+        w: 100%
+        +mq-sm
+          w: 50%
+      &text
+        w: 100%
+        +mq-sm
+          w: 50%
+      &date
+        w: 100%
+        +mq-sm
+          w: 50%
+       
+
+.slider-secondary
+  d: none
+  pos: relative
+  w: 100%
+  +mq-sm
+    d: block
+  +mq-md
+    w: 48%
+  &__
+    &wrap
+      pb: 40px
+
+  .slide
+    jc: space-between
+    w: 230px
+    h: 390px
+    ma: auto
+    +mq-md
+      w: 155px
+      ma: initial
+    +mq-lg
+      w: 180px
+      ma: auto  
+    +mq-xl
+      w: 230px
+    &__
+      &pic
+        h: 144px
+      
+.slide
+  d: flex
+  f-dir: column
+  bg: var(--theme-accent-white)
+  cursor: pointer
+  &:hover
+    box-shadow: 20px 30px 11px rgba(86, 107, 118, 0.21)
+    .slide__title
+      color: var(--theme-text-1)
+  &__
+    &pic
+      w: 100%
+    &pic-img
+      w: 100%
+      h: 100%
+      object-fit: cover
+      object-position: center
+    &title
+      pa: 10px 25px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 10px
+      +mq-sm
+        fs: 11px
+      +mq-md
+        fs: 12px  
+      +mq-lg
+        fs: 15px
+    &text
+      pa: 0px 25px
+      color: var(--theme-text-4)
+      fw: 400
+      fs: 9px
+      +mq-sm
+        fs: 10px
+      +mq-md
+        fs: 11px  
+      +mq-lg
+        fs: 13px
+    &date
+      pa: 20px 25px
+      color: var(--theme-text-4)
+      fw: 400
+      fs: 8px
+      +mq-sm
+        fs: 9px
+      +mq-md
+        fs: 10px  
+      +mq-lg
+        fs: 12px

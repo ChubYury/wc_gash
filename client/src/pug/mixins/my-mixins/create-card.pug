@@ -1,0 +1,9 @@
+mixin creteCard(data = [])
+  +e.wrap
+    +b.slide
+      +e.pic
+        +e.pic-img.IMG(src=data.path alt="blog card")
+      +e.title.H4= data.title
+      +e.text.P= data.text
+      +e.date.P= data.date
+

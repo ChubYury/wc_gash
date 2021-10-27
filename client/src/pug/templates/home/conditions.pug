@@ -39,9 +39,6 @@ include ../../mixins/index
   +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
     +b.conditions
       +e.title.title-secondary.H2 Условия работы
-      each element in conditionsData
-        +e.bar
-          +e.bar-icon.IMG(src=element.conPath alt="conditions bar")
-          +e.bar-icon.--white.IMG(src=element.conPath2 alt="conditions bar")
-          +e.bar-title.H4= element.conTitle
+      +createStateBar(conditionsData)
+        
         
