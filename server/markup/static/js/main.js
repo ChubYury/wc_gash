@@ -7798,10 +7798,41 @@ var blogSecondaryOption = {
     }
   }]
 };
+var digestOption = {
+  dots: false,
+  arrows: true,
+  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  responsive: [{
+    breakpoint: 563,
+    settings: {
+      slidesToShow: 2
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 3
+    }
+  }, {
+    breakpoint: 991,
+    settings: {
+      slidesToShow: 3
+    }
+  }, {
+    breakpoint: 1199,
+    settings: {
+      slidesToShow: 4
+    }
+  }]
+};
 (0, _jquery["default"])('.single-item').slick(slickOption);
 (0, _jquery["default"])('.goods-slider').slick(goodsOption);
 (0, _jquery["default"])('.slider-primary').slick(blogPrimaryOption);
 (0, _jquery["default"])('.slider-secondary').slick(blogSecondaryOption);
+(0, _jquery["default"])('.digest-slider').slick(digestOption);
 
 /***/ }),
 /* 12 */
