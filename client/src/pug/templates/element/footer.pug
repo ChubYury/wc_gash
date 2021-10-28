@@ -1,1 +1,24 @@
 include ../../mixins/index
+
++b.footer-wrap.FOOTER
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.footer 
+      +e.logo
+        +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+      +b.contact 
+        +e.title.P Наши контакты
+        +e.phone.A #[+b.SPAN +38(096)747 53 98]  
+        +e.phone.A #[+b.SPAN +38(096)747 53 98] #[+b.BR]
+        +e.mail.A #[+e.mail.--icon.icon_mail.SPAN &#xe076;] alexgash8@gmail.com
+      +b.schedule
+        +e.title График работы
+        +e.time с 8:00 до 21:00
+        +e.weekends В субботу:с 9:00 до 20:00 
+        +e.weekends В воскресенье: с 10:00 до 19:00
+      +b.social
+        +e.title.P Мы в социальных сетях
+        +e.net
+          +e.link.A #[+e.link.--icon.social_instagram_square.SPAN &#xe0c8;] Instagram
+          +e.link.A #[+e.link.--icon.social_youtube.SPAN &#xe0a3;] YouTube
+          +e.link.A #[+e.link.--icon.social_facebook.SPAN &#xe093;] Facebook
+        +e.text © GASH 2018. Все права защищены
