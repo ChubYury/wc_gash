@@ -1,0 +1,151 @@
+.footer
+  d: flex
+  flex-wrap: wrap
+  jc: center
+  pa: 30px 0px
+  +mq-xl
+    jc: space-between
+  &__
+    &logo
+      w: 100%
+      +mq-sm
+        w: initial
+      ma: 0px auto
+      +mq-xl
+        ma: 0px 0px
+      &--
+        &img
+          w: 100%
+          h: 100%
+          //object-fit: cover
+          //object-position: center
+.contact
+  pa: 10px 0px
+  w: 100%
+  fa: center
+  +mq-sm
+    w: 50%
+    fa: start
+  +mq-md
+    w: 40%
+  +mq-xl
+    w: 28%
+  &__
+    &title
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 10px
+      +mq-sm
+        fs: 12px
+      +mq-lg
+        fs: 15px
+    &phone
+      color: var(--theme-text-2)
+      fw: 700
+      lh: 3.5
+      fs: 13px
+      +mq-sm
+        fs: 15px
+      +mq-lg
+        fs: 18px
+    &mail
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 9px
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        fs: 14px
+      &--
+        &icon
+          color: var(--theme-text-1)
+          font-family: ElegantIcons
+          fw: 800
+          fs: 14px
+.schedule
+  pa: 10px 0px
+  w: 50%
+  //fa: center
+  +mq-sm
+    w: 40%
+  +mq-md
+    w: 25%
+    fa: start
+  +mq-xl
+    w: 20%
+  &__
+    &title
+      mb: 10px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 10px
+      +mq-sm
+        fs: 12px
+      +mq-lg
+        fs: 15px
+    &time
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 9px
+      line-height: 2.5
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        fs: 14px
+    &weekends
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 9px
+      line-height: 2.5
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        fs: 14px
+.social
+  w: 50%
+  pa: 10px 0px
+  //fa: center
+  +mq-sm
+    w: 40%
+  +mq-md
+    w: 25%
+    fa: start
+  +mq-xl
+    w: 20%
+  &__
+    &title
+      mb: 10px 
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 10px
+      +mq-sm
+        fs: 12px
+      +mq-lg
+        fs: 15px
+    &net
+      d: flex
+    &link
+      pr: 3px
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 9px
+      fa: center
+      line-height: 2.5
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        fs: 14px
+      &--
+        &icon
+          font-family: ElegantIcons
+          fw: 800
+          color: var(--theme-text-1)
+    &text
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 9px
+      line-height: 2.5
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        fs: 14px

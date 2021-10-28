@@ -1,12 +1,12 @@
-.subscription-wrap
-  pa: 30px 0px
-  bg: var(--theme-text-2)
-  br-l: 2px solid var(--theme-text-1)
+//.subscription-wrap
 
 .subscription
   d: flex
   flex-wrap: wrap
   jc: space-between
+  pa: 30px 30px
+  bg: var(--theme-text-2)
+  br-l: 2px solid var(--theme-text-1)
   &__
     &title
       w: 100%
@@ -26,6 +26,8 @@
     &input-wrap
       pos: relative
       w: 100%
+      +mq-sm
+        w: 50%
     &input-tel
       ma: 10px
       pa: 16px 19px 19px 19px
@@ -45,7 +47,6 @@
           fs: 13px
     &btn-submit
       ma: 10px
-      h: 50px
       pa: 19px 57px 16px 56px
 
 
@@ -53,10 +54,10 @@
   fs: 11px
   pos: absolute
   z-index: 10
-  mt: 2px
+  mt: -5px
   color: var(--theme-text-2)
-  bg: var(--theme-primary-green)
-  box-shadow: 0px 6px 2px -2px rgba(0, 169, 157, 47%)
+  bg: var(--theme-text-1)
+  box-shadow: 0px 6px 2px -2px rgba(199, 51, 44, 0.3)
   pa: 4px 10px
   br-radius: 1px
   pointer-events: none
@@ -69,4 +70,4 @@
     left: 6px
     br-l: 5px solid rgba(0, 0, 0, 0)
     br-r: 5px solid rgba(0, 0, 0, 0)
-    br-b: 5px solid var(--theme-primary-green)
+    br-b: 5px solid var(--theme-text-1)
