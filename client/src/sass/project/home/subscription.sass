@@ -1,0 +1,46 @@
+.subscription-wrap
+  pa: 30px 0px
+  bg: var(--theme-text-2)
+  br-l: 2px solid var(--theme-text-1)
+
+.subscription
+  d: flex
+  flex-wrap: wrap
+  jc: space-between
+  &__
+    &title
+      w: 100%
+      color: var(--theme-accent-white)
+      +mq-md
+        w: 60%
+
+.form
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: flex-start
+  w: 100%
+  +mq-md
+    w: 40%
+  &__
+    &input-tel
+      ma: 10px
+      pa: 16px 19px 19px 19px
+      br: none
+      &::placeholder
+        display: block !important
+        ml: -19px
+        color: var(--theme-text-2)
+        fw: 700
+        fs: 8px
+        fa: center
+        +mq-sm
+          fs: 10px
+        +mq-md
+          fs: 11px
+        +mq-lg
+          fs: 13px
+    &btn-submit
+      ma: 10px
+      h: 50px
+      pa: 19px 57px 16px 56px
