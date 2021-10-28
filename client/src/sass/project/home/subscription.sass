@@ -23,6 +23,9 @@
   +mq-md
     w: 40%
   &__
+    &input-wrap
+      pos: relative
+      w: 100%
     &input-tel
       ma: 10px
       pa: 16px 19px 19px 19px
@@ -44,3 +47,26 @@
       ma: 10px
       h: 50px
       pa: 19px 57px 16px 56px
+
+
+[data-type='validator-error']
+  fs: 11px
+  pos: absolute
+  z-index: 10
+  mt: 2px
+  color: var(--theme-text-2)
+  bg: var(--theme-primary-green)
+  box-shadow: 0px 6px 2px -2px rgba(0, 169, 157, 47%)
+  pa: 4px 10px
+  br-radius: 1px
+  pointer-events: none
+  &::before
+    content: ''
+    w: 0
+    h: 0
+    top: -5px
+    pos: absolute
+    left: 6px
+    br-l: 5px solid rgba(0, 0, 0, 0)
+    br-r: 5px solid rgba(0, 0, 0, 0)
+    br-b: 5px solid var(--theme-primary-green)
