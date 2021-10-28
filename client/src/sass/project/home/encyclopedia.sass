@@ -7,7 +7,7 @@
       jc: space-between
       pb: 30px
     &name-btn
-      mr: 200px
+      mr: 80px
       pb: 3px
       color: var(--theme-text-2)
       fw: 700
@@ -15,6 +15,7 @@
       +mq-sm
         fs: 11px
       +mq-lg
+        mr: 150px
         fs: 14px
   .slide
     d: flex
@@ -37,17 +38,18 @@
         h: 150px
 
   .control
-    top: -40px
+    top: -50px
     z-index: 1000
     &:hover
       box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
     &:active
       box-shadow: none
     +mq-lg
-      top: -60px
+      top: -70px
       w: 40px
       h: 40px
       fs: 15px
+      
     &--
       &prev
         right: 40px
@@ -64,16 +66,18 @@
     &wrap
       pb: 40px
 
-.btn
+.btn-open
   pos: relative
   w: 12px
   h: 9px
+  top: -5px
   br: none
   bg: var(--theme-accent-white)
   &__
-    line
-      w: 100px
-      h: 2px
+    &line
+      pos: absolute
+      w: 12px
+      h: 1px
       bg: var(--theme-text-1)
       &--
         &top
