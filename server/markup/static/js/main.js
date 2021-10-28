@@ -7735,6 +7735,8 @@ module.exports = __webpack_require__(10);
 
 __webpack_require__(11);
 
+__webpack_require__(14);
+
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10515,6 +10517,1346 @@ module.exports = function (module) {
 
   return module;
 };
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _regenerator = _interopRequireDefault(__webpack_require__(15));
+
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(17));
+
+var _pureJsValidator = __webpack_require__(18);
+
+document.addEventListener('DOMContentLoaded', function () {
+  var forms = Array.from(document.getElementsByClassName('js-form-ajax'));
+  forms.forEach(function (form) {
+    var validator = new _pureJsValidator.Validator(form, function () {
+      var _ref = (0, _asyncToGenerator2["default"])(_regenerator["default"].mark(function _callee(err, isValid) {
+        var method, action, body, value, response, result;
+        return _regenerator["default"].wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!isValid) {
+                  _context.next = 14;
+                  break;
+                }
+
+                method = form.dataset.method;
+                action = form.dataset.action;
+                body = new FormData(form);
+                value = Object.fromEntries(body.entries());
+                _context.next = 7;
+                return fetch(action, {
+                  method: method,
+                  headers: {
+                    'Content-Type': 'application/JSON;charset=utf-8'
+                  },
+                  body: JSON.stringify(value)
+                });
+
+              case 7:
+                response = _context.sent;
+
+                if (!response.ok) {
+                  _context.next = 14;
+                  break;
+                }
+
+                _context.next = 11;
+                return response.json();
+
+              case 11:
+                result = _context.sent;
+                console.log(result);
+                form.reset();
+
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x, _x2) {
+        return _ref.apply(this, arguments);
+      };
+    }());
+  });
+});
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(16);
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _typeof2 = _interopRequireDefault(__webpack_require__(2));
+
+var runtime = function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined;
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+
+  try {
+    define({}, "");
+  } catch (err) {
+    define = function define(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+    return generator;
+  }
+
+  exports.wrap = wrap;
+
+  function tryCatch(fn, obj, arg) {
+    try {
+      return {
+        type: "normal",
+        arg: fn.call(obj, arg)
+      };
+    } catch (err) {
+      return {
+        type: "throw",
+        arg: err
+      };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+  var ContinueSentinel = {};
+
+  function Generator() {}
+
+  function GeneratorFunction() {}
+
+  function GeneratorFunctionPrototype() {}
+
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+
+  if (NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = GeneratorFunctionPrototype;
+  define(Gp, "constructor", GeneratorFunctionPrototype);
+  define(GeneratorFunctionPrototype, "constructor", GeneratorFunction);
+  GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction");
+
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function (method) {
+      define(prototype, method, function (arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function (genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor ? ctor === GeneratorFunction || (ctor.displayName || ctor.name) === "GeneratorFunction" : false;
+  };
+
+  exports.mark = function (genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  exports.awrap = function (arg) {
+    return {
+      __await: arg
+    };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+
+        if (value && (0, _typeof2["default"])(value) === "object" && hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function (value) {
+            invoke("next", value, resolve, reject);
+          }, function (err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function (unwrapped) {
+          result.value = unwrapped;
+          resolve(result);
+        }, function (error) {
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function (resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg();
+    }
+
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  });
+  exports.AsyncIterator = AsyncIterator;
+
+  exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+    var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl);
+    return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) {
+      return result.done ? result.value : iter.next();
+    });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          context.sent = context._sent = context.arg;
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+        var record = tryCatch(innerFn, self, context);
+
+        if (record.type === "normal") {
+          state = context.done ? GenStateCompleted : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+
+    if (method === undefined) {
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        if (delegate.iterator["return"]) {
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError("The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (!info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      context[delegate.resultName] = info.value;
+      context.next = delegate.nextLoc;
+
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+    } else {
+      return info;
+    }
+
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  defineIteratorMethods(Gp);
+  define(Gp, toStringTagSymbol, "Generator");
+  define(Gp, iteratorSymbol, function () {
+    return this;
+  });
+  define(Gp, "toString", function () {
+    return "[object Generator]";
+  });
+
+  function pushTryEntry(locs) {
+    var entry = {
+      tryLoc: locs[0]
+    };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    this.tryEntries = [{
+      tryLoc: "root"
+    }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function (object) {
+    var keys = [];
+
+    for (var key in object) {
+      keys.push(key);
+    }
+
+    keys.reverse();
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1,
+            next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    return {
+      next: doneResult
+    };
+  }
+
+  exports.values = values;
+
+  function doneResult() {
+    return {
+      value: undefined,
+      done: true
+    };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+    reset: function reset(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+      this.method = "next";
+      this.arg = undefined;
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          if (name.charAt(0) === "t" && hasOwn.call(this, name) && !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+    stop: function stop() {
+      this.done = true;
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+    dispatchException: function dispatchException(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !!caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+    abrupt: function abrupt(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+
+        if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry && (type === "break" || type === "continue") && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc) {
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+    complete: function complete(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" || record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+    finish: function finish(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+    "catch": function _catch(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+
+          return thrown;
+        }
+      }
+
+      throw new Error("illegal catch attempt");
+    },
+    delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+  return exports;
+}(( false ? "undefined" : (0, _typeof2["default"])(module)) === "object" ? module.exports : {});
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  if ((typeof globalThis === "undefined" ? "undefined" : (0, _typeof2["default"])(globalThis)) === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)(module)))
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+module.exports = _asyncToGenerator;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Validator = void 0;
+
+var common = {
+  publicMethods: ['validate', 'formatString', 'destroy', 'reload', 'getFormHandle', 'getFields', 'showErrors', 'hideErrors'],
+  className: 'Validator'
+},
+    Protected = function Protected(formHandle, submitCallback, settings) {
+  formHandle.JsValidator = this;
+  this.settings = {
+    onAir: true,
+    showErrors: true,
+    autoHideErrors: false,
+    autoHideErrorsTimeout: 2000,
+    locale: 'en',
+    messages: {},
+    rules: {},
+    errorClassName: 'error',
+    removeSpaces: false,
+    autoTracking: true,
+    eventsList: ['keyup', 'change', 'blur']
+  };
+  var self = this;
+  this.formHandle = formHandle || null;
+  this.submitCallback = submitCallback || null;
+  this.fields = this.getFields(this.formHandle.querySelectorAll('[data-rule]'));
+  this.applySettings(settings || {});
+  this.submitCallback = this.submitCallback.bind(this);
+  this._eventChangeWithDelay = this._eventChangeWithDelay.bind(this);
+  this._eventChange = this._eventChange.bind(this);
+  this._eventSubmit = this._eventSubmit.bind(this);
+  this.submitCallback && this.eventsBuilder('addEventListener');
+  this.settings.autoTracking && 'MutationObserver' in window && new MutationObserver(function (mutationRecords) {
+    [].forEach.call(mutationRecords, function (mutation) {
+      switch (mutation.type) {
+        case 'subtree':
+        case 'childList':
+          var reloadFlag = false,
+              childsArray = [];
+          [].forEach.call(mutation.addedNodes, function (targetElem) {
+            childsArray = targetElem.querySelectorAll ? targetElem.querySelectorAll('*') : [];
+
+            if (['SELECT', 'INPUT', 'TEXTAREA', 'CHECKBOX', 'RADIOBUTTON'].indexOf(targetElem.tagName) !== -1) {
+              reloadFlag = true;
+            }
+
+            ;
+            !reloadFlag && [].forEach.call(childsArray, function (elem) {
+              if (['SELECT', 'INPUT', 'TEXTAREA', 'CHECKBOX', 'RADIOBUTTON'].indexOf(elem.tagName) !== -1) {
+                reloadFlag = true;
+              }
+            });
+          });
+          reloadFlag && self.reload();
+          break;
+      }
+    });
+  }).observe(this.formHandle, {
+    childList: true,
+    subtree: true
+  });
+  return this;
+};
+
+Protected.prototype = {
+  messages: {
+    en: {
+      required: {
+        empty: 'This field is required',
+        incorrect: 'Incorrect value'
+      },
+      notzero: {
+        empty: 'Please make a selection',
+        incorrect: 'Incorrect value'
+      },
+      integer: {
+        empty: 'Enter an integer value',
+        incorrect: 'Incorrect integer value'
+      },
+      "float": {
+        empty: 'Enter an float number',
+        incorrect: 'Incorrect float'
+      },
+      min: {
+        empty: 'Enter more',
+        incorrect: 'Enter more'
+      },
+      max: {
+        empty: 'Enter less',
+        incorrect: 'Enter less'
+      },
+      between: {
+        empty: 'Enter the between {0}-{1}',
+        incorrect: 'Enter the between {0}-{1}'
+      },
+      name: {
+        empty: 'Please, enter your name',
+        incorrect: 'Incorrect name'
+      },
+      lastname: {
+        empty: 'Please, enter your lastname',
+        incorrect: 'Incorrect lastname'
+      },
+      phone: {
+        empty: 'Please, enter the phone number',
+        incorrect: 'Incorrect phone number'
+      },
+      email: {
+        empty: 'Please, enter your email address',
+        incorrect: 'Incorrect email address'
+      },
+      length: {
+        empty: 'Please, Enter a minimum of {0} characters and a maximum of {1}',
+        incorrect: 'Incorrect. Enter a minimum of {0} characters and a maximum of {1}'
+      },
+      minlength: {
+        empty: 'Please, enter at least {0} characters',
+        incorrect: 'You have entered less than {0} characters'
+      },
+      maxlength: {
+        empty: 'Please, enter at maximum {0} characters',
+        incorrect: 'You have entered more than {0} characters'
+      },
+      maxfilesize: {
+        empty: 'The size of one or more selected files larger than {0} {1}',
+        incorrect: 'The size of one or more selected files larger than {0} {1}'
+      },
+      fileextension: {
+        empty: 'Select file',
+        incorrect: 'One or more files have an invalid type'
+      }
+    }
+  },
+  rules: {
+    required: function required(value) {
+      return '' !== value;
+    },
+    notzero: function notzero(value) {
+      return parseInt(value, 10) > 0;
+    },
+    integer: function integer(value) {
+      return new RegExp(/^[0-9]+$/gi).test(value);
+    },
+    "float": function float(value) {
+      value = value.toString().replace(/\,/, '.');
+      return this.integer(value) || new RegExp(/^([0-9])+(\.)([0-9]+$)/gi).test(value);
+    },
+    min: function min(value, params) {
+      if (this["float"](value)) {
+        return parseFloat(value) >= parseFloat(params[0]);
+      }
+
+      return parseInt(value, 10) >= parseInt(params[0], 10);
+    },
+    max: function max(value, params) {
+      if (this["float"](value)) {
+        return parseFloat(value) <= parseFloat(params[0]);
+      }
+
+      return parseInt(value, 10) <= parseInt(params[0], 10);
+    },
+    between: function between(value, params) {
+      params[1] = params[1] || 999999;
+
+      if (this["float"](value)) {
+        return parseFloat(value) >= parseFloat(params[0]) && parseFloat(value) <= parseFloat(params[1]);
+      }
+
+      if (this.integer(value)) {
+        return parseInt(value, 10) >= parseInt(params[0], 10) && parseInt(value, 10) <= parseInt(params[1], 10);
+      }
+
+      return false;
+    },
+    name: function name(value) {
+      if (value.length > 0 && value.length < 2) {
+        return false;
+      }
+
+      return new RegExp(/^[a-zA-Z\sа-яА-ЯёЁ\-]+$/g).test(value);
+    },
+    lastname: function lastname(value) {
+      return this.name(value);
+    },
+    phone: function phone(value) {
+      if (value.replace(/[^0-9]+/gi, '').match(/[0-9]+/gi) && value.replace(/[^0-9]+/gi, '').match(/[0-9]+/gi)[0].length < 6) {
+        return false;
+      }
+
+      return new RegExp(/^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/g).test(value);
+    },
+    email: function email(value) {
+      return new RegExp(/^(("[\w-\s]+")|([\w\-]+(?:\.[\w\-]+)*)|("[\w-\s]+")([\w\-]+(?:\.[\w\-]+)*))(@((?:[\w\-]+\.)*\w[\w\-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i).test(value);
+    },
+    length: function length(value, params) {
+      return this.between(value.replace(/\s{2,}/g, ' ').length, params);
+    },
+    maxlength: function maxlength(value, params) {
+      return this.max(value.replace(/\s{2,}/g, ' ').length, params);
+    },
+    minlength: function minlength(value, params) {
+      return this.min(value.replace(/\s{2,}/g, ' ').length, params);
+    },
+    maxfilesize: function maxfilesize(value, params) {
+      var i,
+          l = value.length,
+          unitsOffset = 1;
+
+      switch (params[1].toLowerCase()) {
+        case 'b':
+          unitsOffset = 1;
+          break;
+
+        case 'kb':
+          unitsOffset = 1024;
+          break;
+
+        case 'mb':
+          unitsOffset = 1048576;
+          break;
+
+        case 'gb':
+          unitsOffset = 1073741824;
+          break;
+
+        case 'tb':
+          unitsOffset = 1099511627776;
+          break;
+      }
+
+      for (i = 0; i < l; i += 1) {
+        if (parseFloat(value[i]) > parseFloat(params[0]) * unitsOffset) {
+          return false;
+        }
+      }
+
+      return true;
+    },
+    fileextension: function fileextension(value, params) {
+      var i,
+          a,
+          l = params.length,
+          b = value.length,
+          cmpResC = 0;
+
+      for (i = 0; i < l; i += 1) {
+        for (a = 0; a < b; a += 1) {
+          if (params[i] === value[a].split('.').pop()) {
+            cmpResC += 1;
+          }
+        }
+      }
+
+      return value.length === cmpResC ? true : false;
+    }
+  },
+  orderFields: function orderFields(attrName, attrValue) {
+    var self = this,
+        retObj = {};
+    !!attrName && !!attrValue && Object.keys(this.fields).forEach(function (field) {
+      if (self.fields[field].handle[attrName] && self.fields[field].handle[attrName] === attrValue) {
+        retObj[field] = self.fields[field];
+      }
+    });
+    return retObj;
+  },
+  _eventSubmit: function _eventSubmit(e) {
+    e.preventDefault();
+    this.hideErrors(false, true);
+    !this.validate() && this.showErrors();
+    this.submitCallback(this.errors || null, this.errors ? false : true) === true && this.formHandle.submit();
+  },
+  _eventChange: function _eventChange(e) {
+    var radioBtns,
+        self = this;
+
+    if (this.settings.removeSpaces && new RegExp(/\s{2,}/g).test(e.target.value)) {
+      e.target.value = e.target.value.replace(/\s{2,}/g, ' ');
+    }
+
+    if (e.target.type === 'radio') {
+      radioBtns = this.orderFields('name', e.target.name);
+      Object.keys(radioBtns).forEach(function (btn) {
+        self.hideErrors(radioBtns[btn].handle);
+      });
+    } else {
+      this.hideErrors(e.target);
+    }
+
+    if (!this.validate(e.target)) {
+      this.showErrors(e.target);
+      !this.settings.showErrors && this.submitCallback(this.errors, false);
+    }
+  },
+  _eventChangeWithDelay: function _eventChangeWithDelay(e) {
+    var self = this;
+
+    if (this.intervalID) {
+      clearTimeout(this.intervalID);
+    }
+
+    this.intervalID = setTimeout(function () {
+      self._eventChange.apply(self, [e]);
+    }, 400);
+  },
+  applySettings: function applySettings(settings) {
+    var self = this;
+    settings.rules && Object.keys(settings.rules).forEach(function (ruleName) {
+      self.rules[ruleName] = settings.rules[ruleName];
+    });
+    settings.messages && Object.keys(settings.messages).forEach(function (locale) {
+      Object.keys(settings.messages[locale]).forEach(function (ruleName) {
+        Object.keys(settings.messages[locale][ruleName]).forEach(function (param) {
+          self.settings.messages[locale] = self.settings.messages[locale] || {};
+          self.settings.messages[locale][ruleName] = self.settings.messages[locale][ruleName] || {};
+          self.settings.messages[locale][ruleName][param] = settings.messages[locale][ruleName][param];
+        });
+      });
+    });
+    Object.keys(settings).forEach(function (param) {
+      self.settings[param] = settings[param];
+    });
+    return this;
+  },
+  getFields: function getFields(fields) {
+    var retData = {},
+        rules = [],
+        params = [];
+    fields = fields || this.formHandle.querySelectorAll('[data-rule]');
+    Object.keys(fields).forEach(function (fieldIndex) {
+      rules = fields[fieldIndex].getAttribute('data-rule').split('|');
+      Object.keys(rules).forEach(function (ruleIndex) {
+        if (rules[ruleIndex].match(/-/gi)) {
+          params = rules[ruleIndex].split('-');
+          rules[ruleIndex] = params[0];
+          params = params.splice(1);
+          rules[ruleIndex] = [rules[ruleIndex], params];
+        } else {
+          rules[ruleIndex] = [rules[ruleIndex], []];
+        }
+      });
+      retData[fieldIndex] = {
+        name: fields[fieldIndex].getAttribute('name'),
+        rules: rules,
+        defaultValue: fields[fieldIndex].getAttribute('data-default'),
+        handle: fields[fieldIndex],
+        intervalID: null
+      };
+    });
+    return retData;
+  },
+  validate: function validate(validationField) {
+    var self = this,
+        fields = validationField ? this.getFields([validationField]) : this.fields,
+        result,
+        ruleName,
+        params,
+        defaultValue,
+        value,
+        message,
+        messageType = null;
+    this.errors = this.errors ? null : this.errors;
+    Object.keys(fields).forEach(function (n) {
+      result = true;
+      fields[n].rules && Object.keys(fields[n].rules).forEach(function (ruleIndex) {
+        ruleName = fields[n].rules[ruleIndex][0];
+        params = fields[n].rules[ruleIndex][1];
+        defaultValue = fields[n].defaultValue;
+        value = fields[n].handle.value;
+
+        switch (fields[n].handle.type) {
+          case 'checkbox':
+            !fields[n].handle.checked && (value = '');
+            break;
+
+          case 'radio':
+            var radioBtns = self.orderFields('name', fields[n].handle.name),
+                checked = false;
+            Object.keys(radioBtns).forEach(function (i) {
+              radioBtns[i].handle.checked && (checked = true);
+            });
+
+            if (!checked) {
+              Object.keys(radioBtns).forEach(function (i) {
+                try {
+                  message = self.settings.messages[self.settings.locale][ruleName].empty;
+                } catch (e) {
+                  message = self.messages[self.settings.locale][ruleName].empty;
+                }
+              });
+              value = '';
+            }
+
+            break;
+
+          case 'file':
+            if (fields[n].handle.files && fields[n].handle.files.length) {
+              value = [];
+              Object.keys(fields[n].handle.files).forEach(function (fileIndex) {
+                switch (ruleName) {
+                  case 'maxfilesize':
+                    value.push(fields[n].handle.files[fileIndex].size);
+                    break;
+
+                  case 'fileextension':
+                    value.push(fields[n].handle.files[fileIndex].name);
+                    break;
+                }
+              });
+            }
+
+            break;
+        }
+
+        if (result && !(value === '' && !fields[n].rules.join('|').match(/\|{0,1}required\|{0,1}/))) {
+          if (result && defaultValue && value !== defaultValue) {
+            result = false;
+            messageType = 'incorrect';
+          } else if (result && self.rules[ruleName] && !self.rules[ruleName](value, params)) {
+            if ('' === value) {
+              result = false;
+              messageType = 'empty';
+            } else {
+              result = false;
+              messageType = 'incorrect';
+            }
+          }
+
+          if (result) {
+            self.hideErrors(fields[n].handle, true);
+          } else {
+            self.errors = self.errors || {};
+
+            if (ruleName === 'required' && fields[n].rules[1] && fields[n].rules[1][0]) {
+              ruleName = fields[n].rules[1][0];
+              messageType = 'empty';
+            }
+
+            try {
+              try {
+                message = self.settings.messages[self.settings.locale][ruleName][messageType];
+              } catch (e) {
+                message = self.messages[self.settings.locale][ruleName][messageType];
+              }
+            } catch (e) {
+              ruleName = 'required';
+              message = self.messages[self.settings.locale][ruleName][messageType];
+            }
+
+            !params.length && params.push(value);
+            self.errors[n] = {
+              name: fields[n].name,
+              errorText: self.formatString(message, params)
+            };
+
+            if (!self.submitCallback) {
+              self.errors[n].handle = fields[n].handle;
+            }
+          }
+        }
+      });
+    });
+
+    if (this.submitCallback) {
+      return this.errors ? false : true;
+    }
+
+    return this.errors || true;
+  },
+  hideErrors: function hideErrors(validationField, removeClass) {
+    var self = this,
+        errorDiv;
+    Object.keys(this.fields).forEach(function (n) {
+      if (validationField && validationField === self.fields[n].handle || !validationField) {
+        errorDiv = self.fields[n].handle.nextElementSibling;
+        removeClass && self.fields[n].handle.classList.remove(self.settings.errorClassName);
+        errorDiv && errorDiv.getAttribute('data-type') === 'validator-error' && errorDiv.parentNode.removeChild(errorDiv);
+      }
+    });
+  },
+  showErrors: function showErrors(validationField) {
+    var self = this,
+        errorDiv,
+        insertNodeError = function insertNodeError(refNode, errorObj) {
+      refNode.classList.add(self.settings.errorClassName);
+
+      if (refNode.nextElementSibling && refNode.nextElementSibling.getAttribute('data-type') === 'validator-error') {
+        return;
+      }
+
+      if (self.settings.showErrors) {
+        errorDiv = document.createElement('div');
+        errorDiv.setAttribute('class', self.settings.errorClassName);
+        errorDiv.setAttribute('data-type', 'validator-error');
+        errorDiv.innerHTML = errorObj.errorText;
+        refNode.parentNode.insertBefore(errorDiv, refNode.nextSibling);
+      }
+    };
+
+    Object.keys(this.errors).forEach(function (r) {
+      if (validationField) {
+        Object.keys(self.fields).forEach(function (n) {
+          self.fields[n].handle.getAttribute('name') === validationField.getAttribute('name') && insertNodeError(self.fields[n].handle, self.errors[r]);
+        });
+      } else {
+        if (r === '0' || r > 0 && self.fields[r].name !== self.fields[r - 1].name) {
+          insertNodeError(self.fields[r].handle, self.errors[r]);
+        }
+      }
+    });
+
+    if (this.settings.autoHideErrors) {
+      if (!validationField) {
+        if (this.intervalID) {
+          clearTimeout(this.intervalID);
+        }
+
+        this.intervalID = setTimeout(function () {
+          self.intervalID = null;
+          self.hideErrors(false);
+        }, this.settings.autoHideErrorsTimeout);
+      } else {
+        if (validationField.intervalID) {
+          clearTimeout(validationField.intervalID);
+        }
+
+        if (!this.intervalID) {
+          validationField.intervalID = setTimeout(function () {
+            validationField.intervalID = null;
+            self.hideErrors(validationField);
+          }, this.settings.autoHideErrorsTimeout);
+        }
+      }
+    }
+  },
+  getFormHandle: function getFormHandle() {
+    return this.formHandle;
+  },
+  formatString: function formatString(string, params) {
+    return string.replace(/\{(\d+)\}/gi, function (match, number) {
+      return match && params[number] ? params[number] : '';
+    });
+  },
+  destroy: function destroy() {
+    this.hideErrors(false, true);
+    this.eventsBuilder('removeEventListener');
+  },
+  reload: function reload(submitCallback, settings) {
+    this.destroy();
+
+    switch (arguments.length) {
+      case 2:
+        this.submitCallback = submitCallback;
+        this.settings = settings;
+        break;
+
+      case 1:
+        this.settings = submitCallback;
+        break;
+    }
+
+    this.fields = this.getFields(this.formHandle.querySelectorAll('[data-rule]'));
+    this.submitCallback && this.eventsBuilder('addEventListener');
+    this.applySettings(settings || {});
+  },
+  eventsBuilder: function eventsBuilder(actionName) {
+    var self = this;
+    this.formHandle[actionName]('submit', this._eventSubmit);
+    this.settings.onAir && Object.keys(this.fields).forEach(function (field) {
+      [].forEach.call(self.settings.eventsList, function (event) {
+        if (event === 'keyup') {
+          self.fields[field].handle[actionName](event, self._eventChangeWithDelay);
+        } else {
+          self.fields[field].handle[actionName](event, self._eventChange);
+        }
+      });
+    });
+  }
+};
+
+var Validator = function Validator() {
+  function construct(constructor, args) {
+    function Class() {
+      return constructor.apply(this, args);
+    }
+
+    Class.prototype = constructor.prototype;
+    return new Class();
+  }
+
+  var original = construct(Protected, arguments),
+      Publicly = function Publicly() {};
+
+  Publicly.prototype = {};
+  [].forEach.call(common.publicMethods, function (member) {
+    Publicly.prototype[member] = function () {
+      return original[member].apply(original, arguments);
+    };
+  });
+  return new Publicly(arguments);
+};
+
+exports.Validator = Validator;
 
 /***/ })
 ],[9]);

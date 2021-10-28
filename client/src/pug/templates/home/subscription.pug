@@ -6,5 +6,6 @@ include ../../mixins/index
       +e.title.title-secondary.H2 Станьте частью системы Gash Care”, мы сможем 
                 | предложить оптимальное решение Вашей проблемы!
       +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-small" method="POST" enctype="multipart/form-data")
-        +e.input-tel.dim.INPUT(name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
+        +e.input-wrap
+          +e.input-tel.dim.INPUT(name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
         +e.btn-submit.btn.BUTTON(type="submit") Отправить
