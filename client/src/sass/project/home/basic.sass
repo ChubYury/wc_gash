@@ -3,6 +3,7 @@
   pos: relative
 
   .control
+    bottom: 4px
     +mq-lg
       w: 40px
       h: 40px
@@ -10,17 +11,31 @@
     &--
       &prev
         +mq-lg
-          top: 52%
+          top: 266px
           right: 0px
+        +mq-xl
+          top: 330px
       &next
         +mq-lg
-          top: 43%
+          top: 226px
           right: 0px
+        +mq-xl
+          top: 295px
 
 .basic-slide
   position: relative
   width: 100%
-  h: 100%
+  h: 330px
+  +mq-sm
+    h: 523px
+  +mq-xl
+    h: 590px
+  &::before
+    content: ''
+    pos: absolute
+    w: 100%
+    h: 100%
+    background: linear-gradient(0deg, rgba(23,23,23,0.8575805322128851) 0%, rgba(255,255,255,0.04245448179271705) 64%)
   &__
     &img
       w: 100%
@@ -32,15 +47,17 @@
       w: 100%
       pa: 20px
       right: 0px
-      bottom: 0px
+      bottom: 66px
       +mq-lg
         w: 496px
       +mq-xl
         w: 600px
     &text-title  
       color: var(--theme-accent-white)
+      mb: 30px
       fw: 700
       fs: 25px
+      line-height: 1.2
       +mq-md
         fs: 28px
       +mq-xl
@@ -59,17 +76,29 @@
 .basic-tiles
   d: flex
   flex-wrap: wrap
-  h: 100%
+  pos: relative
+  +mq-lg
+    h: 523px
+  +mq-xl
+    h: 590px
+  
 .item
   pos: relative
+  top: -4px
+  +mq-lg
+    top: 0px
+  +mq-xl
+    h: 50%
   &__
     &img
       w: 100%
       h: 100%
+      object-fit: cover
+      object-position: center
     &text
       pos: absolute
       max-w: 270px
-      top: 20%
+      top: 10%
       left: 10px
       +mq-md
         top: 30%
@@ -78,21 +107,23 @@
         top: 20%
         left: 10px
       +mq-xl
-        top: 30%
-        left: 30px
+        top: 18%
+        left: 3%
       
     &text-title
+      mb: 10px
       fw: 700
       fs: 20px
       color: var(--theme-text-1)
       +mq-sm
-        fs: 22px
+        mb: 23px
+        fs: 32px
       +mq-md
-        fs: 23px
+        fs: 33px
       +mq-lg
-        fs: 24px
+        fs: 34px
       +mq-xl
-        fs: 25px
+        fs: 35px
     &text-subtitle
       fw: 700
       fs: 15px
@@ -106,9 +137,9 @@
       +mq-xl
         fs: 25px
   &--
-    &mod-top
+    &top
       w: 100%
-    &mod-left
+    &left
       w: 50%
       +mq-sm
         w: 40%
@@ -116,7 +147,7 @@
         w: 50%
       +mq-xl
         w: 40%
-    &mod-right
+    &right
       w: 50%
       +mq-sm
         w: 60%

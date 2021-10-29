@@ -1,0 +1,91 @@
+@font-face
+	font-family: "svgfont"
+	src: url('./../fonts/svgfont.woff2') format('woff2'), url('./../fonts/svgfont.woff') format('woff'), url('./../fonts/svgfont.eot'), url('./../fonts/svgfont.eot?#iefix') format('embedded-opentype'), url('./../fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+$icon-box: "\EA01"
+$icon-calendar-time: "\EA02"
+$icon-car: "\EA03"
+$icon-chat : "\EA04"
+$icon-chat-people: "\EA05"
+$icon-coverlet: "\EA06"
+$icon-cushion: "\EA07"
+$icon-facebook: "\EA08"
+$icon-frame: "\EA09"
+$icon-hand: "\EA0A"
+$icon-heart: "\EA0B"
+$icon-info: "\EA0C"
+$icon-instagram: "\EA0D"
+$icon-leaf: "\EA0E"
+$icon-mattress-cov: "\EA0F"
+$icon-mattress: "\EA10"
+$icon-pants: "\EA11"
+$icon-percent: "\EA12"
+$icon-scrissors: "\EA13"
+$icon-shield: "\EA14"
+$icon-stomagash: "\EA15"
+$icon-youtube-line: "\EA16"
+$icon-youtube: "\EA17"
+
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+.icon--type_box:before
+	content: $icon-box
+.icon--type_calendar-time:before
+	content: $icon-calendar-time
+.icon--type_car:before
+	content: $icon-car
+.icon--type_chat :before
+	content: $icon-chat 
+.icon--type_chat-people:before
+	content: $icon-chat-people
+.icon--type_coverlet:before
+	content: $icon-coverlet
+.icon--type_cushion:before
+	content: $icon-cushion
+.icon--type_facebook:before
+	content: $icon-facebook
+.icon--type_frame:before
+	content: $icon-frame
+.icon--type_hand:before
+	content: $icon-hand
+.icon--type_heart:before
+	content: $icon-heart
+.icon--type_info:before
+	content: $icon-info
+.icon--type_instagram:before
+	content: $icon-instagram
+.icon--type_leaf:before
+	content: $icon-leaf
+.icon--type_mattress-cov:before
+	content: $icon-mattress-cov
+.icon--type_mattress:before
+	content: $icon-mattress
+.icon--type_pants:before
+	content: $icon-pants
+.icon--type_percent:before
+	content: $icon-percent
+.icon--type_scrissors:before
+	content: $icon-scrissors
+.icon--type_shield:before
+	content: $icon-shield
+.icon--type_stomagash:before
+	content: $icon-stomagash
+.icon--type_youtube-line:before
+	content: $icon-youtube-line
+.icon--type_youtube:before
+	content: $icon-youtube

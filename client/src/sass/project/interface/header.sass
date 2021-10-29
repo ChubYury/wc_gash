@@ -1,68 +1,31 @@
 .head
   d: flex
-  f-dir: column
-  flex-wrap: wrap
   ai: center
   jc: space-between
-  pa: 10px 0px
-  +mq-sm
-    f-dir: row
+  pa: 19px 0px
+  +mq-md
+    ai: flex-start
+    jc: flex-start
   &__
     &logo
+      w: 90px
+      h: 40px
+      +mq-sm
+        w: auto
+        h: 100%
       &--
         &img
           w: 100%
-        
-.info
-  &__
-    &work
-      d: flex
-      f-dir: column
-      +mq-md
-        ai: flex-start
-      +mq-xl
-        f-dir: row
-        ai: flex-end
-         
-    &phone
-      mr: 10px
-      color: var(--theme-text-2)
-      fw: 700
-      fs: 25px
-      fa: center
-      +mq-md
-        fs: 28px
-      +mq-xl
-        fs: 30px
-    &icon
-      mr: 3px
-      font-family: ElegantIcons
-      fw: 800
-      color: var(--theme-text-1)
-      fs: 20px
-      +mq-md
-        fs: 23px
-      +mq-xl
-        fs: 25px
-    &time
-      mb: 5px
-      fw: 400
-      fs: 9px
-      fa: center
-      color: var(--theme-text-2)
-      +mq-md
-        fs: 11px
-      +mq-xl
-        fs: 13px
+          h: 100%
+    
         
 .navbar
   d: flex
-  pb: 10px
+  +mq-lg
+    w: 80%
+    jc: space-between
+
   &__
-    &list
-      d: flex
-      ai: center
-      jc: center
     &link
       ma: 0px 5px
       fw: 400
@@ -76,23 +39,47 @@
       &:hover
         fd: underline
         
-
-.order
-  d: flex
-  f-dir: column
-  ai: flex-start
-  jc: center
+.info
+  d: none
+  ml: 20px
   +mq-sm
-    f-dir: row
-    w: 100%
-    //jc: center
-  +mq-md
-    f-dir: column
-    jc: space-between
-    w: auto
+    display: block
   &__
-    &item
-      ma: 5px 0px 5px 5px
+    &work
+      d: flex
+      f-dir: column
+      mt: 20px
+      +mq-md
+        mt: 10px
+      +mq-lg
+        mt: 20px
+        f-dir: row
+        ai: flex-end
+    &phone
+      mr: 50px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 25px
+      +mq-md
+        mr: 15px
+        fs: 28px
+      +mq-xl
+        mr: 50px
+        fs: 30px
+    &icon
+      mr: 15px
+      font-family: ElegantIcons
+      fw: 800
+      color: var(--theme-text-1)
+      fs: 20px
+      +mq-md
+        fs: 23px
+      +mq-xl
+        fs: 25px
+    &time
+      //pos: relative
+      mb: 5px
+      //bottom: 0px
       fw: 400
       fs: 9px
       color: var(--theme-text-2)
@@ -100,7 +87,50 @@
         fs: 11px
       +mq-xl
         fs: 13px
+        
+
+.order
+  d: none
+  +mq-md
+    d: block
+  &__
+    &item
+      fw: 400
+      fs: 9px
+      color: var(--theme-text-2)
+      +mq-md
+        ml: 10px
+        mb: 15px
+        fs: 11px
+      +mq-lg
+        mb: 12px
+      +mq-xl
+        ml: 40px
+        fs: 13px
       &--
         &color
           mr: 3px
           color: var(--theme-text-1)
+
+.btn-menu
+  pos: relative
+  w: 24px
+  h: 22px
+  mr: 5px
+  br: none
+  bg: var(--theme-accent-white)
+  +mq-sm
+    d: none
+  &__
+    &line
+      pos: absolute
+      w: 24px
+      h: 2px
+      bg: var(--theme-text-1)
+      &--
+        &top
+          top: 0%
+        &center
+          top: 50%
+        &bottom
+          top: 100%
