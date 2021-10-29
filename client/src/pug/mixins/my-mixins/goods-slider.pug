@@ -26,16 +26,17 @@ mixin createGoodsSlider(data = [])
                   +b.ds-caption--light.SPAN Артикул: #[+b.SPAN= element.goodsVendorCode]
               +e.head.THEAD
                 +e.row.--relief.TR
-                  +e.cell.--head.TH Стороны:
+                  +e.cell.--head.--head-primary.TH Стороны:
                   +e.cell.--head.--head-secondary.TH Прогиб:
                   +e.cell.--head.--head-secondary.TH Жесткость:
               +b.TBODY
-                each elementTable in element.table
+                each elementTable, index in element.table
                   +e.row.TR
-                    +e.cell.--column-primary.TD 1 #[+b.triangle]
+                    +e.cell.--column-primary.TD= index + 1 
+                      +b.triangle
                     +e.cell.--column-secondary.TD= elementTable.goodsFlexure
                     +e.cell--column-secondary.TD= elementTable.goodsRigidity
-            +b.ds-table.TABLE
+            +b.ds-table--appearance-downgraded.TABLE
               +b.TBODY     
                 +e.row.--relief.TR
                   +e.cell.--head.TH Высота: #[+e.text-medium.SPAN= element.goodsHeight]
@@ -53,7 +54,3 @@ mixin createGoodsSlider(data = [])
                                 | классическом представлении, допускает внедрение 
                                 | своевременного выполнения сверхзадачи. Имеется спорная 
                                 | точка зрения, гласящая примерно следующее: тщательные 
-                                | исследования конкурентов освещают чрезвычайно интересные 
-                                | особенности картины в целом, однако конкретные выводы, 
-                                | разумеется, описаны максимально подробно.
-

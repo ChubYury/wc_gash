@@ -1,6 +1,7 @@
 .goods-title
   w: 100%
   pt: 60px
+  pb: 30px
   color: var(--theme-text-2)
   
 .goods-slider
@@ -33,12 +34,11 @@
 .goods-slide
   d: flex
   flex-wrap: wrap
-  ai: center
+  ai: stretch
   jc: space-between
   &__
     &description
       w: 100%
-      mb: 20px
       pa: 20px 0px
       br-t: 5px solid var(--theme-text-3)
       br-b: 5px solid var(--theme-text-3)
@@ -47,13 +47,14 @@
         w: 45%
         ml: 10px
       +mq-xl
-        w: 28%
+        w: 24%
         order: 3
     &description-title
-      pb: 10px
+      padding: 10px 0px 21px 0px
       color: var(--theme-text-2)
       fw: 700
       fs: 12px
+      line-height: 1.5
       +mq-sm
         fs: 15px
       +mq-lg
@@ -62,6 +63,7 @@
       color: var(--theme-text-4)
       fw: 400
       fs: 9px
+      line-height: 1.4
       +mq-sm
         fs: 12px
       +mq-lg
@@ -71,15 +73,17 @@
 .goods-pic
   pos: relative
   w: 100%
-  mb: 20px
   order: 1
   +mq-sm
     w: 50%
-    ml: 10px
-  +mq-md
-    height: 250px
   +mq-xl
-    w: 28%
+    w: 31%
+  &::before
+    content: ''
+    pos: absolute
+    w: 100%
+    h: 100%
+    background: linear-gradient(0deg, rgba(23,23,23,0.8575805322128851) 0%, rgba(255,255,255,0.04245448179271705) 64%)
   &__
     &photo
       w: 100%
@@ -124,6 +128,7 @@
       bottom: 0px
       d: flex
       jc: space-between
+      pa: 0px 15px 23px 15px
     &rating-icon
       &--
         &color
@@ -165,6 +170,7 @@
   .ds-caption
     &--
       &table
+        pb: 22px
         color: var(--theme-text-2)
         fw: 700
         fs: 15px
@@ -176,6 +182,7 @@
       &between
         d: flex
         jc: space-between
+        pb: 15px
       &bold
         color: var(--theme-text-2)
         fw: 700
@@ -195,12 +202,18 @@
         +mq-lg
           fs: 13px
   .ds-table
+    
     &__
+      &caption
+        pa: 20px 0px 0px 0px
       &cell
+        pa: 10px 0px
         &--
           &head
+            color: var(--theme-text-2)
             fw: 700
             fs: 10px
+            pa: 10px 0px
             +mq-sm
               fs: 13px
             +mq-lg
@@ -247,7 +260,9 @@
             fa: end
       &text-medium
         fw: 400
-
+    &--
+      &appearance-downgraded
+        mt: 20px
 .triangle
   position: absolute
   width: 0

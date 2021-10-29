@@ -1,0 +1,30 @@
+include ../../mixins/index
+
+-
+  const crumbsData = [
+        {
+          name: 'Название',
+          path: '#',
+        },
+        {
+          name: 'Название',
+          path: '#',
+        },
+        {
+          name: 'Название',
+          path: '#',
+        },
+      ]
+
++b.breadcrumbs-wrap.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.breadcrumbs
+      - let countCrumbs = 0;
+      each element in crumbsData
+        if countCrumbs < crumbsData.length -1
+          +e.link.A(href=element.path)= element.name 
+            +e.link.--slash.SPAN /
+        else  
+          +e.link.A(href=element.path)= element.name 
+        - countCrumbs += 1;
+      +b.test.icon-logo.SPAN
