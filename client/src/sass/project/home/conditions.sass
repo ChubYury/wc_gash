@@ -11,42 +11,41 @@
     &title
       w: 100%
       mb:20px
-    &bar
-      d: flex
-      f-dir: column
-      ai: center
-      jc: center
-      ma: 10px 0px
-      w: 170px
-      pa: 24px 24px 25px 23px
-      box-shadow: -10px 30px 29px rgba(86, 107, 118, 0.21)
-      tr: .5s
-      cursor: pointer
+  .bar
+    d: flex
+    f-dir: column
+    ai: center
+    jc: center
+    w: 170px
+    ma: 10px 0px
+    pa: 24px 24px 25px 23px
+    bg: var(--theme-accent-white)
+    box-shadow: -10px 30px 29px rgba(86, 107, 118, 0.21)
+    tr: .5s
+    cursor: pointer
+    +mq-lg
       &:hover
         bg: var(--theme-text-1)
         
-        .conditions__bar-title
+        .bar__title
           color: var(--theme-accent-white)
-        .conditions__bar-text
+        .bar__text
           color: var(--theme-accent-white)
-        .conditions__bar-icon
+        .bar__icon
           color: var(--theme-accent-white)
-          
-    &bar-icon
-      mb: 25px
-      color: var(--theme-text-1)
-      fs: 40px
-      +mq-md
-        w: 39px
-        h: 38px
-      
-    &bar-title
-      color: var(--theme-text-2)
-      fw: 400
-      fs: 8px
-      fa: center
-      tr: .5s
-      +mq-sm
-        fs: 10px
-      +mq-xl
-        fs: 13px
+    &__        
+      &icon
+        mb: 50px
+        color: var(--theme-text-1)
+        fs: 40px
+        filter: none
+      &title
+        color: var(--theme-text-2)
+        fw: 400
+        fs: 8px
+        fa: center
+        tr: .5s
+        +mq-sm
+          fs: 10px
+        +mq-xl
+          fs: 13px

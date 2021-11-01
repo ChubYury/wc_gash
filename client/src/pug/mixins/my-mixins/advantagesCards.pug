@@ -1,6 +1,6 @@
 mixin createAdvantagesCards(data = [])
   each element in data
-    +e.bar.--small
-      +e.bar-title.--min= element.adTitle
-      +e.bar-icon.SPAN(class=element.adClass)
-      +e.bar-text= element.adText 
+    +b.bar.--small
+      +e.title.--min= element.adTitle
+      +e.icon.SPAN(class=element.adClass)
+      +e.text= element.adText 
