@@ -17,8 +17,8 @@ const slickOption = {
 const goodsOption = {
 
   arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
 
   dots: false,
   slidesToShow: 1,
@@ -28,8 +28,8 @@ const goodsOption = {
 
 const blogPrimaryOption = {
   arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
@@ -52,8 +52,8 @@ const blogSecondaryOption = {
       breakpoint: 563,
       settings: {
         arrows: true,
-        prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-        nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+        prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+        nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
         slidesToShow: 2,
         slidesToScroll: 1,
         asNavFor: '.slider-primary',
@@ -67,8 +67,8 @@ const blogSecondaryOption = {
 const digestOption = {
   dots: false,
   arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
