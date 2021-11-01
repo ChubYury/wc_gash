@@ -14,10 +14,6 @@
   .control
     top: -40px
     z-index: 1000
-    &:hover
-      box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
-    &:active
-      box-shadow: none
     +mq-sm
       top: -454px
     +mq-md
@@ -27,6 +23,10 @@
       w: 40px
       h: 40px
       fs: 15px
+      &:hover
+        box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
+      &:active
+        box-shadow: none
     &--
       &prev
         right: 40px
@@ -39,8 +39,8 @@
 
 
 .slider-primary
-  w: 100%
   position: relative
+  w: 100%
   +mq-md
     w: 48%
   &__
@@ -50,7 +50,11 @@
       
   .slide
     flex-wrap: wrap
+    max-w: 270px
     h: 390px
+    ma: 0px auto
+    +mq-sm
+      max-w: 100%
     &:hover
       box-shadow: none
       .slide__title

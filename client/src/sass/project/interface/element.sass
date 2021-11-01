@@ -20,10 +20,10 @@ body
     fs: 11px
   +mq-lg
     fs: 13px
-  &:hover
-    box-shadow: 6px 6px 1px 0px rgba(199, 51, 44, 0.3)
-  &:active
-    box-shadow: none
+    &:hover
+      box-shadow: 6px 6px 1px 0px rgba(199, 51, 44, 0.3)
+    &:active
+      box-shadow: none
 
 
 
@@ -48,10 +48,11 @@ body
   bg: var(--theme-accent-white)
   tr: .5s
   cursor: pointer
-  &:hover
-    box-shadow: 20px 30px 11px rgba(86, 107, 118, 0.21)
-    .slide__title
-      color: var(--theme-text-1)
+  +mq-lg
+    &:hover
+      box-shadow: 20px 30px 11px rgba(86, 107, 118, 0.21)
+      .slide__title
+        color: var(--theme-text-1)
   &__
     &pic
       w: 100%
@@ -102,7 +103,6 @@ body
   bottom: 0%
   right: 0px
   br: none
-  //br-radius: 2px
   bg: var(--theme-text-1)
   font-family: ElegantIcons
   fw: 800
@@ -111,10 +111,10 @@ body
   tr: 0.5s
   z-index: 10
   cursor: pointer
-  &:hover
-    color: var(--theme-text-2)
-    bg: var(--theme-accent-white)
-    //box-shadow: 0px 4px 4px rgba(255,255, 255, 0.25)
+  +mq-lg
+    &:hover
+      color: var(--theme-text-2)
+      bg: var(--theme-accent-white)
   &--prev
     right: 52%
   &--next

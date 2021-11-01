@@ -1,6 +1,6 @@
 .advantages
   d: flex
-  jc: space-around
+  jc: space-between
   flex-wrap: wrap
   &__
     &bar
@@ -9,35 +9,32 @@
       &--
         &big
           w: 100%
-          pa: 5px
+          ma: 10px 0px
           +mq-md
-            w: 60%
+            w: 66%
         &small
           d: flex
           flex-wrap: wrap
           jc: space-between
           w: 100%
-          ma: 10px
-          pa:10px
+          ma: 10px 0px
+          pa: 34px 32px 50px 32px
           tr: .5s
           cursor: pointer
           +mq-sm
-            w: 45%
+            w: 47%
           +mq-md
-            w: 27%
-            pa:15px
-          &:hover
-            bg: var(--theme-text-1)
-            
-            .advantages__bar-title
-              color: var(--theme-accent-white)
-            .advantages__bar-text
-              color: var(--theme-accent-white)
-            .advantages__bar-icon
-              d: none
-            .advantages__bar-icon--white
-              d: block
-              filter: drop-shadow(2px 2px 0px #393c49)
+            w: 32%
+            &:hover
+              bg: var(--theme-text-1)
+              
+              .advantages__bar-title
+                color: var(--theme-accent-white)
+              .advantages__bar-text
+                color: var(--theme-accent-white)
+              .advantages__bar-icon
+                color: var(--theme-accent-white)
+                filter: drop-shadow(2px 2px 0px #393c49)
     &bar-img
       w: 100%
       h: 100%
@@ -83,12 +80,14 @@
           +mq-xl
             fs: 15px
     &bar-icon
+      pos: relative
+      left: -10px
       w: 20px
       h: 20px
-      opacity: 0.8
+      tr: .5s
       filter: drop-shadow(3px 3px 0px #393c49)
-    &bar-icon--white
-      d: none
+      color: var(--theme-text-1)
+      fs: 25px
     &bar-text
       width: 100%
       color: var(--theme-text-4)

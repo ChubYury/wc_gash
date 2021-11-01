@@ -21,6 +21,6 @@
 	@extend %<%= className %>
 	display: inline-block
 
-<% _.each(glyphs, function(glyph) { %>.<%= className %>--type_<%= glyph.name %>:before
+<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before
 	content: $<%= className %>-<%= glyph.name %>
 <% }); %>
