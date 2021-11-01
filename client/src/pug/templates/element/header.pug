@@ -10,7 +10,7 @@ include ../../mixins/index
             each name in ['О нас', 'Новости', 'Энциклопедия матрасов', 'Gash Care', 'Контакты']
               +e.link.A= name
         +e.work
-          +e.phone.A #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
+          +e.phone.A(href="tel:+38(096)747 53 98") #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
           +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
       +b.order.UL 
         +e.item.LI #[+e.item--color.SPAN –]  Запись на прием 
@@ -19,4 +19,4 @@ include ../../mixins/index
       +b.btn-menu.BUTTON
             +e.line.--top
             +e.line.--center
-            +e.line.--bottom
+            +e.line.--bottom          
