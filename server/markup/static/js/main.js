@@ -7792,8 +7792,8 @@ var slickOption = {
 };
 var goodsOption = {
   arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
   dots: false,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -7801,8 +7801,8 @@ var goodsOption = {
 };
 var blogPrimaryOption = {
   arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
@@ -7821,8 +7821,8 @@ var blogSecondaryOption = {
     breakpoint: 563,
     settings: {
       arrows: true,
-      prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-      nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+      prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+      nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
       slidesToShow: 2,
       slidesToScroll: 1,
       asNavFor: '.slider-primary',
@@ -7834,8 +7834,8 @@ var blogSecondaryOption = {
 var digestOption = {
   dots: false,
   arrows: true,
-  prevArrow: '<button type="button" class="control control--prev">&#x44;</button>',
-  nextArrow: '<button type="button" class="control control--next">&#x45;</button>',
+  prevArrow: '<button type="button" class="control control--prev">&#x23;</button>',
+  nextArrow: '<button type="button" class="control control--next">&#x24;</button>',
   slidesToShow: 1,
   slidesToScroll: 1,
   mobileFirst: true,
