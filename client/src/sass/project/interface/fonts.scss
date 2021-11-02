@@ -8,6 +8,14 @@
     url('../fonts/ElegantIcons.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'ProximaNova';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+}
+@font-face {
   font-family: 'Exo2';
   font-weight: 400;
   font-display: swap;
