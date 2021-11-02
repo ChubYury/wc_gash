@@ -1,0 +1,164 @@
+.wrap
+  pa: 20px 0px
+  bg: var(--theme-relief-2)
+
+.body-new
+  bg: var(--theme-accent-white)
+  +mq-md
+    mr: 50px
+  &__
+    &title
+      pb: 20px
+      bg: var(--theme-relief-2)
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 22px
+      +mq-md
+        fs: 25px
+    &main-pic
+      w: 100%
+      &--
+        &photo
+          w: 100%
+          h: 100%
+          object-fit: cover
+          object-position: center
+    &text
+      lh: 2
+      pa: 0px 30px 30px 30px
+      color: var(--theme-text-4)
+      letter-spacing: 0px
+      fs: 10px
+      +mq-md
+        fs: 13px
+      &--
+        &light
+          pa: 5px 30px 10px 25px
+          font-family: ProximaNova, sans-serif
+          fw: 400
+          fs: 10px
+          +mq-md
+            fs: 12px
+        &bold
+          fw: 700
+          letter-spacing: 0px
+          lh: 2
+        &color
+          pa: 0px
+          color: var(--theme-text-1)
+        &utterance
+          ma: 0px 30px 30px 30px
+          pa: 24px 20px 27px 20px
+          bg: var(--theme-relief-2)
+          color: var(--theme-text-4)
+          font-style: italic
+          fa: center
+          +mq-sm
+            pa: 45px 88px 55px 88px
+    &list-title
+      pa: 5px 30px 40px 30px
+      color: var(--theme-text-2)
+      letter-spacing: 1px
+      fw: 700
+      fs: 22px
+      +mq-md
+        fs: 25px
+      &--num
+        color: var(--theme-text-1)
+        fs: 17px
+        +mq-md
+          fs: 20px
+.list
+  list-style: none
+  mb: 20px !important
+  &__
+    &item
+      pos: relative
+      pa: 0px 30px 25px 80px
+      color: var(--theme-text-4)
+      lh: 2
+      fs: 10px
+      +mq-md
+        fs: 13px
+      &::before
+        pos: absolute
+        top: 10px
+        left: 21px
+        content: '\2027'
+        color: var(--theme-text-1)
+        fs: 86px
+        lh: 0
+
+
+.list-num
+  list-style: none
+  counter-reset: num
+  mb: 20px !important
+  &__
+    &item
+      counter-increment: num
+      pos: relative
+      pa: 0px 30px 25px 80px
+      color: var(--theme-text-4)
+      lh: 2
+      fs: 10px
+      +mq-md
+        fs: 13px
+      &:nth-child(-n+9):before
+        content: "0" counter(num)
+      &::before
+        content: counter(num)
+        pos: absolute
+        top: 18px
+        left: 30px
+        color: var(--theme-text-1)
+        fw: 700
+        fs: 14px
+        fa: right
+        lh: 0
+
+
+.ds-table
+  w: 80%
+  ma: 22px 30px 40px 30px
+  +mq-sm
+    w: 89%
+  +mq-md
+    w: 89%
+  +mq-lg
+    w: 91%
+  +mq-xl
+    w: 93%
+  &__
+    &row
+      h: 44px
+      &:nth-child(odd) 
+        bg: var(--theme-accent-white)
+      &:nth-child(even) 
+        bg: var(--theme-relief-2)
+    &cell
+      fs: 10px
+      +mq-md
+        fs: 13px
+      &--
+        &head
+          fw: 700
+          bg: var(--theme-relief-2)
+          fa: center
+          fs: 11px
+        +mq-md
+          fs: 14px
+        &column
+          pt: 18px
+          fa: center
+
+.panel
+  pa: 20px 30px 30px 30px
+  &__
+    &link
+      w: 25px
+      h: 25px
+      mr: 2px
+      &link-img
+        w: 100%
+        h: 100%
