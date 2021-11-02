@@ -1,0 +1,40 @@
+.our-link-wrap
+  bg: var(--theme-text-2)
+  pa: 36px 0px 52px 0px
+
+.our-link
+  d: flex
+  f-dir: column
+  flex-wrap: wrap
+  +mq-md
+    f-dir: row
+    jc: space-between
+  &__
+    &panel
+      mt: 10px
+      d: flex
+      f-dir: column
+      ai: center
+      +mq-md
+        ai: start
+    &panel-title
+      color: var(--theme-accent-white)
+      fw: 700
+      fs: 12px
+      +mq-md
+        fs: 15px
+    &panel-link
+      color: var(--theme-text-6)
+      fw: 700
+      fs: 11px
+      lh: 2.2
+      +mq-md
+        fs: 14px
+      &--
+        &head
+          color: var(--theme-accent-white)
+          fw: 700
+          fs: 12px
+          lh: 1.8
+          +mq-md
+            fs: 15px
