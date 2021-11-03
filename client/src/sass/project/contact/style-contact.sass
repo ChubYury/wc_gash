@@ -1,0 +1,75 @@
+.contact-title
+  color: var(--theme-text-2)
+  fw: 700
+  fs: 22px
+  mb: 35px
+  +mq-lg
+    fs: 25px
+
+.contact-body
+  d: flex
+  flex-wrap: wrap
+  bg: var(--theme-accent-white)
+  pa: 18px 18px 47px  18px
+  +mq-lg
+    f-dir: column
+
+.panel
+  &__
+    &title
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 17px
+      mb: 44px
+      +mq-lg
+        fs: 20px
+    &link
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 10px
+      lh: 1.8
+      +mq-lg
+        fs: 13px
+      //&--
+        //&phon
+        //&mail
+    &link-icon
+      font-family: ElegantIcons
+      fw: 800
+      color: var(--theme-text-2)
+      fs: 13px
+    &text
+      color: var(--theme-text-2)
+      fw: 400
+      fs: 10px
+      lh: 1.8
+      +mq-lg
+        fs: 13px
+  &--
+    &contact
+      pa: 0px 0px 0px 0px
+      mb: 52px
+    
+.btn
+  mb: 10px
+  pa: 18px 0px
+  +mq-lg
+    w: 100%
+  &--
+    &other
+      bg: var(--theme-text-2)
+      +mq-lg
+        &:hover
+          box-shadow: 6px 6px 1px 0px rgba(0, 0, 0, 0.3)
+        &:active
+          box-shadow: none
+
+.map
+  &--
+    &wrap
+      position: relative
+      ml: 35px
+  &__
+    &body
+      w: 100%
+      h:600px

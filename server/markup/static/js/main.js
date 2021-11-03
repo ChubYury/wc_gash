@@ -7768,6 +7768,8 @@ __webpack_require__(12);
 
 __webpack_require__(14);
 
+__webpack_require__(19);
+
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -11857,6 +11859,37 @@ var Validator = function Validator() {
 };
 
 exports.Validator = Validator;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initMap = initMap;
+
+function initMap() {
+  var mapContainer = document.getElementById('js-map');
+  var coordinates = {
+    lat: 50.4547,
+    lng: 30.5238
+  };
+  var correctZoom = 10;
+  var map = new google.maps.Map(mapContainer, {
+    center: coordinates,
+    zoom: correctZoom
+  });
+  var marker = new google.maps.Marker({
+    position: coordinates,
+    map: map
+  });
+}
+
+window.initMap = initMap;
 
 /***/ })
 ],[10]);
