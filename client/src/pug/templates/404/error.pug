@@ -1,0 +1,34 @@
+include ../../mixins/index
+
+-
+  const crumbsTextData = [
+        {
+          name: 'Главная',
+          path: '../templates/',
+        },
+        {
+          name: 'Название',
+          path: '#',
+        },
+        {
+          name: 'Название',
+          path: '#',
+        },
+      ]
+
+
++b.error-wrap
+  +createCrumbs(crumbsTextData)
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.g-row.--appearance_spaced.--space_none
+      +b.g-cell.g-cols--12.--6-lg
+        +b.error-img
+          +e.photo.IMG(src="../static/img/error-img-1.png" alt="photo error" title='photo error')
+      +b.g-cell.g-cols--12.--6-lg
+        +b.error-content
+          +e.title.H1 Страница не найдена
+          +e.text.P Вы находитесь здесь потому, что запрашиваемая
+                  | страница не существует или была перемещена по
+                  | другому адресу.
+          +b.btn.--left.BUTTON На главную
+          +b.btn.--right.BUTTON Контакты
