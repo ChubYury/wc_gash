@@ -1,0 +1,43 @@
+include ../../mixins/index
+
+-
+  const crumbsTextData = [
+        {
+          name: 'Главная',
+          path: '../templates/',
+        },
+        {
+          name: 'Название',
+          path: '#',
+        },
+        {
+          name: 'Название',
+          path: '#',
+        },
+      ]
+
+
++b.error-wrap
+  +createCrumbs(crumbsTextData)
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.contact-title.H1 Контакты
+    +b.g-row.--appearance_spaced.--space_none
+      +b.g-cell.g-cols--12.--3-lg
+        +b.contact-body
+          +b.panel.--contact
+            +e.title.H3 Наши контакты
+            +e.link.--phon.A(href="tel:+38(096)747 53 98") #[+e.link-icon.icon_phone.SPAN &#xe090;] +38 (096)7475398 #[+b.BR]
+            +e.link.--phon.A(href="tel:+38(096)747 53 98") +38 (096)7475398#[+b.BR]
+            +e.link.--mail.A(href="mailto:alexgash8@gmail.com") #[+e.link-icon.icon_mail.SPAN] alexgash8@gmail.com
+          +b.panel--contact
+            +e.title.H3 График работы
+            +e.text.P #[+e.link-icon.icon_hourglass.SPAN] с 8:00 до 21:00     
+            +e.text.P В субботу:с 9:00 до 20:00
+            +e.text.P В воскресенье: с 10:00 до 19:00
+          +b.btn.--other.BUTTON Запись на прием
+          +b.btn.BUTTON Индивидуальный подбор матраса
+          +b.btn.BUTTON Обратный звонок
+      +b.g-cell.g-cols--12.--9-lg
+        +b.map.--wrap
+          +e.body(id='js-map')
+          
