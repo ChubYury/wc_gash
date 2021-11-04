@@ -1,3 +1,5 @@
+.contact-wrap
+  bg: var(--theme-relief-2)
 .contact-title
   color: var(--theme-text-2)
   fw: 700
@@ -9,24 +11,26 @@
 .contact-body
   d: flex
   flex-wrap: wrap
+  f-dir: column
   bg: var(--theme-accent-white)
   pa: 18px 18px 47px  18px
+  +mq-sm
+    f-dir: row
   +mq-lg
     f-dir: column
 
   .btn
-  mb: 10px
-  pa: 18px 0px
-  +mq-lg
     w: 100%
-  &--
-    &other
-      bg: var(--theme-text-2)
-      +mq-lg
-        &:hover
-          box-shadow: 6px 6px 1px 0px rgba(0, 0, 0, 0.3)
-        &:active
-          box-shadow: none
+    ma: -13px 0px 19px 0px
+    pa: 18px 0px
+    &--
+      &other
+        bg: var(--theme-text-2)
+        +mq-lg
+          &:hover
+            box-shadow: 6px 6px 1px 0px rgba(0, 0, 0, 0.3)
+          &:active
+            box-shadow: none
 
 .panel
   &__
@@ -73,6 +77,10 @@
     &contact
       pa: 0px 0px 0px 0px
       mb: 52px
+      +mq-sm
+        w: 50%
+      +mq-lg
+        w: 100%
     
 
 
@@ -80,11 +88,17 @@
   &--
     &wrap
       position: relative
-      ml: 35px
   &__
     &body
       w: 100%
-      h:600px
+      h: 400px
+      mt: 20px
+      +mq-lg
+        h: 668px
+        mt: 0px
+        ml: 35px
+      +mq-xl
+        h: 628px
 
 .contact-text
   pa: 38px 40px 52px 40px
