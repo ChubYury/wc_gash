@@ -28,16 +28,23 @@
       fw: 400
       fs: 10px
       lh: 1.8
+      fd: none
+      cursor: pointer
       +mq-lg
         fs: 13px
-      //&--
-        //&phon
-        //&mail
+      &--
+        &sideways
+          pl: 43px
     &link-icon
+      ma: 0px 20px 0px 6px
       font-family: ElegantIcons
       fw: 800
-      color: var(--theme-text-2)
-      fs: 13px
+      color: var(--theme-text-1)
+      fs: 14px
+    &link-icon-svg
+      ma: 0px 20px 0px 6px
+      fs: 15px
+      color: var(--theme-text-1)
     &text
       color: var(--theme-text-2)
       fw: 400
@@ -45,6 +52,9 @@
       lh: 1.8
       +mq-lg
         fs: 13px
+      &--
+        &sideways
+          pl: 43px
   &--
     &contact
       pa: 0px 0px 0px 0px
@@ -73,3 +83,6 @@
     &body
       w: 100%
       h:600px
+
+.contact-text
+  pa: 38px 40px 52px 40px
