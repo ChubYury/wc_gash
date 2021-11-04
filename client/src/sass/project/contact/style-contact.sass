@@ -94,11 +94,37 @@
       h: 400px
       mt: 20px
       +mq-lg
+        w: 95%
         h: 668px
         mt: 0px
         ml: 35px
       +mq-xl
+        w: 96%
         h: 628px
 
-.contact-text
+.contact-end
+  ma: 37px 0px 70px 0px
   pa: 38px 40px 52px 40px
+
+  bg: var(--theme-accent-white)
+  &__
+    &text
+      lh: 2
+      pa: 0px 30px 30px 30px
+      color: var(--theme-text-4)
+      letter-spacing: 0px
+      fs: 10px
+      +mq-md
+        fs: 13px
+      &--
+        &light
+          pa: 5px 30px 10px 25px
+          font-family: ProximaNova, sans-serif
+          fw: 400
+          fs: 11px
+          +mq-md
+            fs: 13px
+        &bold
+          fw: 700
+          letter-spacing: 0px
+          lh: 2
