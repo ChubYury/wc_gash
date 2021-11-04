@@ -14,6 +14,20 @@
   +mq-lg
     f-dir: column
 
+  .btn
+  mb: 10px
+  pa: 18px 0px
+  +mq-lg
+    w: 100%
+  &--
+    &other
+      bg: var(--theme-text-2)
+      +mq-lg
+        &:hover
+          box-shadow: 6px 6px 1px 0px rgba(0, 0, 0, 0.3)
+        &:active
+          box-shadow: none
+
 .panel
   &__
     &title
@@ -60,19 +74,7 @@
       pa: 0px 0px 0px 0px
       mb: 52px
     
-.btn
-  mb: 10px
-  pa: 18px 0px
-  +mq-lg
-    w: 100%
-  &--
-    &other
-      bg: var(--theme-text-2)
-      +mq-lg
-        &:hover
-          box-shadow: 6px 6px 1px 0px rgba(0, 0, 0, 0.3)
-        &:active
-          box-shadow: none
+
 
 .map
   &--
