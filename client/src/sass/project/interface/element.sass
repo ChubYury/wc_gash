@@ -25,8 +25,31 @@ body
     &:active
       box-shadow: none
 
-//*********** Card *****************************
 
+.btn-big
+  pos: relative
+  width: 73px
+  height: 73px
+  border: none
+  bg: var(--theme-relief-2)
+  &__
+    &icon
+      fs: 16px
+      color: var(--theme-text-2)
+    &num-secondary
+      pos: absolute
+      top: 13px
+      right: 15px
+      pa: 10px 7px
+      color: var(--theme-accent-white)
+      bg: var(--theme-text-1)
+      br-radius: 50%
+      fs: 12px
+      lh: .1
+    &num-primary
+      mb: -21px
+      color: var(--theme-text-1)
+      fs: 12px
 
 //*********** sliders style *********************
 .slick-list

@@ -1,0 +1,5 @@
+mixin createNavMenu(data = [])
+
+  +b.navbar.NAV
+    each element in data
+      +e.link.A(href=element.path)= element.name

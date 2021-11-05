@@ -9,7 +9,6 @@
   &__
     &logo
       w: 90px
-      h: 40px
       +mq-sm
         w: auto
         h: 100%
@@ -19,100 +18,99 @@
           h: 100%
     
         
-.navbar
-  d: flex
-  +mq-lg
-    w: 80%
-    jc: space-between
+  .navbar
+    d: flex
+    +mq-lg
+      w: 80%
+      jc: space-between
 
-  &__
-    &link
-      ma: 0px 5px
-      fw: 400
-      fs: 9px
-      color: var(--theme-text-2)
-      cursor: pointer
-      +mq-md
-        fs: 11px
-      +mq-xl
-        fs: 13px
-      &:hover
-        fd: underline
+    &__
+      &link
+        ma: 0px 5px
+        fw: 400
+        fs: 9px
+        color: var(--theme-text-2)
+        fd: none
+        cursor: pointer
+        +mq-md
+          fs: 11px
+        +mq-xl
+          fs: 13px
+        &:hover
+          fd: underline
         
-.info
-  d: none
-  ml: 20px
-  +mq-sm
-    display: block
-  &__
-    &work
-      d: flex
-      f-dir: column
-      mt: 20px
-      +mq-md
-        mt: 10px
-      +mq-lg
+  .info
+    d: none
+    ml: 20px
+    +mq-sm
+      display: block
+    &__
+      &work
+        d: flex
+        f-dir: column
         mt: 20px
-        f-dir: row
-        ai: flex-end
-    &phone
-      mr: 50px
-      color: var(--theme-text-2)
-      fw: 700
-      fs: 25px
-      fd: none
-      cursor: pointer
-      +mq-md
-        mr: 15px
-        fs: 28px
-      +mq-xl
+        +mq-md
+          mt: 10px
+        +mq-lg
+          mt: 20px
+          f-dir: row
+          ai: flex-end
+      &phone
         mr: 50px
-        fs: 30px
-    &icon
-      mr: 15px
-      font-family: ElegantIcons
-      fw: 800
-      color: var(--theme-text-1)
-      fs: 20px
-      +mq-md
-        fs: 23px
-      +mq-xl
+        color: var(--theme-text-2)
+        fw: 700
         fs: 25px
-    &time
-      //pos: relative
-      mb: 5px
-      //bottom: 0px
-      fw: 400
-      fs: 9px
-      color: var(--theme-text-2)
-      +mq-md
-        fs: 11px
-      +mq-xl
-        fs: 13px
-        
+        fd: none
+        cursor: pointer
+        +mq-md
+          mr: 15px
+          fs: 28px
+        +mq-xl
+          mr: 50px
+          fs: 30px
+      &icon
+        mr: 15px
+        font-family: ElegantIcons
+        fw: 800
+        color: var(--theme-text-1)
+        fs: 20px
+        +mq-md
+          fs: 23px
+        +mq-xl
+          fs: 25px
+      &time
+        mb: 5px
+        fw: 400
+        fs: 9px
+        color: var(--theme-text-2)
+        +mq-md
+          fs: 11px
+        +mq-xl
+          fs: 13px
+          
 
-.order
-  d: none
-  +mq-md
-    d: block
-  &__
-    &item
-      fw: 400
-      fs: 9px
-      color: var(--theme-text-2)
-      +mq-md
-        ml: 10px
-        mb: 15px
-        fs: 11px
-      +mq-lg
-        mb: 12px
-      +mq-xl
-        ml: 40px
-        fs: 13px
-      &--
-        &color
-          mr: 3px
-          color: var(--theme-text-1)
+  .order
+    d: none
+    +mq-md
+      d: block
+    &__
+      &item
+        fw: 400
+        fs: 9px
+        color: var(--theme-text-2)
+        +mq-md
+          ml: 10px
+          mb: 15px
+          fs: 11px
+        +mq-lg
+          mb: 12px
+        +mq-xl
+          ml: 40px
+          fs: 13px
+        &--
+          &color
+            mr: 3px
+            color: var(--theme-text-1)
 
 .btn-menu
   pos: relative
@@ -136,3 +134,82 @@
           top: 50%
         &bottom
           top: 100%
+
+.kit-bg
+  d: none
+  +mq-lg
+    d: flex
+    pos: absolute
+    w: 100%
+  &__
+    &left
+      w: 30%
+      h: 77px
+      bg: var(--theme-text-2)
+    &right
+      w: 70%
+      h: 77px
+      bg: var(--theme-text-1)
+
+.kit
+  d: none
+  +mq-lg
+    d: flex
+    pos: relative
+  &__
+    &title
+      w: 19%
+      h: 77px
+      pt: 20px
+      bg: var(--theme-text-2)
+    &title-link
+      pos: relative
+      fw: 700
+      color: var(--theme-accent-white)
+      +mq-lg
+        fs: 13px 
+      +mq-xl
+        fs: 15px 
+    &title-icon
+      pos: relative
+      top: 7px
+      mr: 12px
+      color: var(--theme-accent-white)
+      +mq-lg
+        fs: 20px
+      +mq-xl
+        fs: 22px
+    &list
+      d: flex
+      jc: space-around
+      ai: center
+      w: 80%
+      h: 77px
+      color: var(--theme-accent-white)
+      bg: var(--theme-text-1)
+
+.item-link
+  pos: relative
+  d: flex
+  f-dir: column
+  ai: center
+  fd: none
+  &__
+    &icon
+      pos: relative
+      color: var(--theme-relief-4)
+      top: 5px
+      left: 13px
+      +mq-lg
+        fs: 33px 
+      +mq-xl
+        fs: 35px
+    &name
+      pos: relative
+      color: var(--theme-accent-white)
+      top: -20px
+      left: 13px
+      +mq-lg
+        fs: 11px 
+      +mq-xl
+        fs: 13px 
