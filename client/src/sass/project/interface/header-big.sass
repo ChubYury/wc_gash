@@ -1,0 +1,205 @@
+.head-big-wrap
+  &--
+    &line
+      br-b: 1px solid var(--theme-relief-3)  
+.head-big
+  d: flex
+  flex-wrap: wrap
+  ai: center
+  jc: space-between
+  +mq-lg
+    ai: flex-start
+    jc: flex-start
+  
+  
+  .language
+    d: none
+    br-r: 1px solid var(--theme-relief-3)
+    +mq-lg
+      d: block
+      w: 19%
+      pa: 20px 0px 17px 0px
+    &__
+      &link
+        mr: 17px
+        fd: none
+        color: var(--theme-text-2)
+        fs: 12px
+        tr: .5s
+        +mq-lg
+          fs: 15px
+        &:hover
+          color: var(--theme-text-1)
+          
+  .info
+    d: none
+    +mq-lg
+      d: flex
+      w: 60%
+      ml: 0px
+      pa: 19px 0px 17px 34px 
+    &__
+      &search
+        fs:10px
+        color: var(--theme-text-1)
+        fd: none
+        cursor: pointer
+        +mq-lg
+          fs: 13px
+      &search-icon
+        fs: 13px
+        color: var(--theme-text-1)
+        pt: 2px
+  
+  
+  .navbar
+    d: flex
+    jc: space-between
+    &__
+      &link
+        fw: 400
+        fs: 15px
+        color: var(--theme-text-2)
+        fd: none
+        cursor: pointer
+        +mq-lg
+          mr: 15px
+          &:hover
+            fd: underline
+        +mq-xl
+          mr: 33px
+
+  .login
+    d: none
+    +mq-lg
+      d: block
+      w: 20%
+      pa: 19px 0px 17px 14px
+    +mq-xl
+      pa: 19px 0px 17px 52px
+    &__
+      &link
+        fw: 700
+        fs:12px
+        color: var(--theme-text-1)
+        fd: none
+        cursor: pointer
+        +mq-lg
+          fs: 15px
+      &link-icon
+        fs: 14px
+        color: var(--theme-text-1)
+        pr: 10px
+      &link-slash
+        ma: 0px 4px
+
+  .logo
+    w: 19%
+    pt: 9px
+    +mq-lg
+      pb: 19px
+      br-r: 1px solid var(--theme-relief-3)
+    +mq-sm
+      h: 100%
+      pt: 19px
+      &--
+        &img
+          w: 100%
+          h: 100%
+          
+  .work
+    d: none
+    +mq-lg
+      d: flex
+      f-dir: column
+      flex-wrap: wrap
+      w: 60%
+      h: 116px
+      pa: 21px 0px 32px 35px
+    &__
+      &phone
+        mr: 50px
+        color: var(--theme-text-2)
+        fw: 700
+        fs: 25px
+        fd: none
+        lh: .8
+        cursor: pointer
+        +mq-md
+          mr: 15px
+          fs: 28px
+        +mq-xl
+          mr: 50px
+          fs: 30px
+      &icon
+        mr: 15px
+        font-family: ElegantIcons
+        fw: 800
+        color: var(--theme-text-1)
+        fs: 16px
+        +mq-lg
+          fs: 19px
+      &time
+        pt: 33px
+        fw: 400
+        fs: 9px
+        color: var(--theme-text-2)
+        lh: .1
+        +mq-md
+          fs: 11px
+        +mq-xl
+          fs: 13px
+        
+  .order
+    d: none
+    +mq-md
+      d: block
+    &__
+      &item
+        margin: 0px 0px 18px 10px
+        fw: 400
+        fs: 10px
+        color: var(--theme-text-2)
+        line-height: .8
+        +mq-lg
+          fs: 13px
+        &--
+          &color
+            mr: 8px
+            color: var(--theme-text-1)
+  .btn-big
+    d: none
+    margin: 19px 9px 0px 30px
+    +mq-lg
+      d: block
+    +mq-xl
+      margin: 19px 9px 0px 75px
+    &--
+      &left
+        margin: 19px 0px 0px 0px
+        +mq-xl
+          margin: 19px 0px 0px 0px
+
+  .btn-menu
+    d: block
+    pos: relative
+    w: 24px
+    h: 22px
+    mr: 5px
+    br: none
+    bg: var(--theme-accent-white)
+    +mq-lg
+      d: none
+    &__
+      &line
+        pos: absolute
+        w: 24px
+        h: 2px
+        bg: var(--theme-text-1)
+        &--
+          &top
+            top: 0%
+          &center
+            top: 50%
+          &bottom
+            top: 100%
