@@ -20,7 +20,9 @@
     "dev": "npm run watch"
   },
   "dependencies": {
+    "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "micromodal": "^0.4.6",
     "pure-js-validator": "^1.0.1",
     "slick-carousel": "^1.8.1",
     "vue": "^2.6.11"

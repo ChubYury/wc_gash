@@ -58,20 +58,21 @@ include ../../mixins/index
   
 if big != true
   +b.head-wrap.HEADER
+    //+b.myModal(id='innerModal')
     +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
       +b.head
         +e.logo
-          +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+          +e.img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
         +b.info
           +createNavMenu(navMenuData)
           +e.work
             +e.phone.A(href="tel:+38(096)747 53 98") #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
             +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
-        +b.order.UL 
-          +e.item.LI #[+e.item--color.SPAN –]  Запись на прием 
-          +e.item.LI #[+e.item--color.SPAN –]  Индивидуальный подбор матраса 
-          +e.item.LI #[+e.item--color.SPAN –]  Обратный звонок
-        +b.btn-menu.BUTTON
+        +b.order
+          +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-1") #[+e.line.SPAN –] Запись на прием
+          +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-2") #[+e.line.SPAN –] Индивидуальный подбор матраса 
+          +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-3") #[+e.line.SPAN –] Обратный звонок
+        +b.btn-menu.js-menu-trigger.BUTTON
               +e.line.--top
               +e.line.--center
               +e.line.--bottom          
@@ -98,16 +99,16 @@ else
         +b.work
           +e.phone.A(href="tel:+38(096)747 53 98") #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
           +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
-          +b.order.UL 
-            +e.item.LI #[+e.item--color.SPAN –]  Запись на прием  
-            +e.item.LI #[+e.item--color.SPAN –]  Индивидуальный подбор матраса 
-            +e.item.LI #[+e.item--color.SPAN –]  Обратный звонок
+          +b.order
+            +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-1") #[+e.line.SPAN –] Запись на прием
+            +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-2") #[+e.line.SPAN –] Индивидуальный подбор матраса 
+            +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-3") #[+e.line.SPAN –] Обратный звонок
         +b.btn-big.BUTTON #[+e.icon.icon-heart-min.SPAN]
         +b.btn-big.--left.BUTTON
           +e.num-secondary.P 5
           +e.icon.icon-basket.SPAN
           +e.num-primary.P 3500 грн
-        +b.btn-menu.BUTTON
+        +b.btn-menu.js-menu-trigger.BUTTON
               +e.line.--top
               +e.line.--center
               +e.line.--bottom   
