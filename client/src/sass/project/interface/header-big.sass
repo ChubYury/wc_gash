@@ -53,21 +53,22 @@
   
   
   .navbar
-    d: flex
-    jc: space-between
     &__
+      &list
+        d: flex
       &link
+        margin: 0px 41px 0px 3px
         fw: 400
-        fs: 15px
+        fs: 9px
         color: var(--theme-text-2)
         fd: none
         cursor: pointer
-        +mq-lg
-          mr: 15px
-          &:hover
-            fd: underline
+        +mq-md
+          fs: 11px
         +mq-xl
-          mr: 33px
+          fs: 13px
+        &:hover
+          fd: underline
 
   .login
     d: none
@@ -154,19 +155,25 @@
     d: none
     +mq-md
       d: block
+      w: 45%
+  .btn-trigger
+    bg: var(--theme-accent-white)
+    br: none
+    fw: 400
+    fs: 9px
+    color: var(--theme-text-2)
+    +mq-md
+      mb: 5px
+      ml: 10px
+      fs: 11px
+    +mq-xl
+      ml: 40px
+      fs: 13px
     &__
-      &item
-        margin: 0px 0px 18px 10px
-        fw: 400
-        fs: 10px
-        color: var(--theme-text-2)
-        line-height: .8
-        +mq-lg
-          fs: 13px
-        &--
-          &color
-            mr: 8px
-            color: var(--theme-text-1)
+      &line
+        mr: 3px
+        color: var(--theme-text-1)
+  
   .btn-big
     d: none
     margin: 19px 9px 0px 30px

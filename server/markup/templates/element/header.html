@@ -1,26 +1,39 @@
 
 <header class="head-wrap">
+  <!--+b.myModal(id='innerModal')-->
   <div class="g-container g-container--fit_sm-sm g-container--fit_md-md g-container--fit_lg-lg g-container--fit_xl-xl">
     <div class="head">
-      <div class="head__logo"><img class="head__logo head__logo--img" src="../static/img/logo.png" alt="logo" title="logo"/>
+      <div class="head__logo"><img class="head__img" src="../static/img/logo.png" alt="logo" title="logo"/>
       </div>
       <div class="info">
-        <nav class="navbar"><a class="navbar__link" href="../templates/page-404.html">О нас</a><a class="navbar__link" href="../templates/page-text.html">Новости</a><a class="navbar__link" href="../templates/page-404.html">Энциклопедия матрасов</a><a class="navbar__link" href="../templates/page-404.html">Gash Care</a><a class="navbar__link" href="../templates/page-contact.html">Контакты</a>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__link" href="../templates/page-404.html">О нас</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="../templates/page-text.html">Новости</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="../templates/page-404.html">Энциклопедия матрасов</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="../templates/page-404.html">Gash Care</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="../templates/page-contact.html">Контакты</a>
+            </li>
+          </ul>
         </nav>
         <div class="info__work"><a class="info__phone" href="tel:+38(096)747 53 98"><span class="info__icon icon_phone">&#xe090;</span>+38 (096) 747-5398</a>
           <div class="info__time">пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
           </div>
         </div>
       </div>
-      <ul class="order"> 
-        <li class="order__item"><span class="order__item order__item--color">–</span>  Запись на прием 
-        </li>
-        <li class="order__item"><span class="order__item order__item--color">–</span>  Индивидуальный подбор матраса 
-        </li>
-        <li class="order__item"><span class="order__item order__item--color">–</span>  Обратный звонок
-        </li>
-      </ul>
-      <button class="btn-menu">
+      <div class="order">
+        <button class="btn-trigger js-modal-trigger" data-micromodal-trigger="modal-1"><span class="btn-trigger__line">–</span> Запись на прием
+        </button>
+        <button class="btn-trigger js-modal-trigger" data-micromodal-trigger="modal-2"><span class="btn-trigger__line">–</span> Индивидуальный подбор матраса 
+        </button>
+        <button class="btn-trigger js-modal-trigger" data-micromodal-trigger="modal-3"><span class="btn-trigger__line">–</span> Обратный звонок
+        </button>
+      </div>
+      <button class="btn-menu js-menu-trigger">
         <div class="btn-menu__line btn-menu__line--top">
         </div>
         <div class="btn-menu__line btn-menu__line--center">

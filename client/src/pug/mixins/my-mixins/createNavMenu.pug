@@ -1,5 +1,7 @@
 mixin createNavMenu(data = [])
 
   +b.navbar.NAV
-    each element in data
-      +e.link.A(href=element.path)= element.name
+    +e.list.UL
+      each element in data
+        +e.item.LI
+          +e.link.A(href=element.path)= element.name

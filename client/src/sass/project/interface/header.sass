@@ -5,28 +5,45 @@
   pa: 19px 0px
   +mq-md
     ai: flex-start
-    jc: flex-start
+    
   &__
     &logo
       w: 90px
       +mq-sm
-        w: auto
+        w: 20%
         h: 100%
-      &--
-        &img
-          w: 100%
-          h: 100%
+    &img
+      w: 100%
+      h: 100%
     
         
   .navbar
-    d: flex
-    +mq-lg
-      w: 80%
-      jc: space-between
-
+    &.is-active
+      d: block
+      pos: fixed
+      overflow: auto
+      w: 100%
+      h: 100vh
+      bg: var(--theme-accent-grey)
+      top: 0px
+      right: 0px
+      z-index: 15
+      .navbar
+        &__
+          &list
+            f-dir: column
+            ai: center
+          &item
+            //w: 100%
+            ma: 5px 0px
+            pa: 10px
+            &:hover
+              bg: var(--theme-primary-green)
     &__
+      &list
+        d: flex
       &link
-        ma: 0px 5px
+        margin: 0px 41px 0px 3px
         fw: 400
         fs: 9px
         color: var(--theme-text-2)
@@ -42,7 +59,8 @@
   .info
     d: none
     ml: 20px
-    +mq-sm
+    +mq-lg
+      w: 80%
       display: block
     &__
       &work
@@ -63,7 +81,7 @@
         fd: none
         cursor: pointer
         +mq-md
-          mr: 15px
+          mr: 5px
           fs: 28px
         +mq-xl
           mr: 50px
@@ -91,26 +109,26 @@
 
   .order
     d: none
-    +mq-md
+    +mq-lg
       d: block
+      w: 35%
+  .btn-trigger
+    bg: var(--theme-accent-white)
+    br: none
+    fw: 400
+    fs: 9px
+    color: var(--theme-text-2)
+    +mq-md
+      mb: 5px
+      ml: 10px
+      fs: 11px
+    +mq-xl
+      ml: 40px
+      fs: 13px
     &__
-      &item
-        fw: 400
-        fs: 9px
-        color: var(--theme-text-2)
-        +mq-md
-          ml: 10px
-          mb: 15px
-          fs: 11px
-        +mq-lg
-          mb: 12px
-        +mq-xl
-          ml: 40px
-          fs: 13px
-        &--
-          &color
-            mr: 3px
-            color: var(--theme-text-1)
+      &line
+        mr: 3px
+        color: var(--theme-text-1)
 
 .btn-menu
   pos: relative
@@ -119,7 +137,7 @@
   mr: 5px
   br: none
   bg: var(--theme-accent-white)
-  +mq-sm
+  +mq-lg
     d: none
   &__
     &line
