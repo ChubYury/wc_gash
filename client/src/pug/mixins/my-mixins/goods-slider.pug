@@ -26,7 +26,7 @@ mixin createGoodsSlider(data = [])
                   +b.ds-caption--light.SPAN Артикул: #[+b.SPAN= element.goodsVendorCode]
               +e.head.THEAD
                 +e.row.--relief.TR
-                  +e.cell.--head.--head-primary.TH Стороны:
+                  +e.cell.--head.TH Стороны:
                   +e.cell.--head.--head-secondary.TH Прогиб:
                   +e.cell.--head.--head-secondary.TH Жесткость:
               +b.TBODY
@@ -39,13 +39,13 @@ mixin createGoodsSlider(data = [])
             +b.ds-table--appearance-downgraded.TABLE
               +b.TBODY     
                 +e.row.--relief.TR
-                  +e.cell.--head.--head-primary.TH Высота: #[+e.text-medium.SPAN= element.goodsHeight]
-                  +e.cell.--head.--head-primary.TH Объем: #[+e.text-medium.SPAN= element.goodsBulk]
-                  +e.cell.--head.--head-secondary.--medium-delete.TH Старая цена:#[+b.SPAN= element.goodsOldPrice]
+                  +e.cell.--head.TH Высота: #[+e.text-medium.SPAN= element.goodsHeight]
+                  +e.cell.--head.TH Объем: #[+e.text-medium.SPAN= element.goodsBulk]
+                  +e.cell.--head.--medium-delete.TH Старая цена:#[+b.SPAN= element.goodsOldPrice]
                 +e.row.--relief.TR
-                  +e.cell.--head.--head-primary.TH Вес: #[+e.text-medium.SPAN= element.goodsWeight]
-                  +e.cell.--head.--head-primary.TH Тип: #[+e.text-medium.SPAN= element.goodsType]
-                  +e.cell.--head.--head-secondary.--head-big.TH= element.goodsNewPrice
+                  +e.cell.--head.TH Вес: #[+e.text-medium.SPAN= element.goodsWeight]
+                  +e.cell.--head.TH Тип: #[+e.text-medium.SPAN= element.goodsType]
+                  +e.cell.--head.--head-big.TH= element.goodsNewPrice
           +e.description
             +e.description-title.H3 Описание длинный заголовок лучшие матрасы
             +e.description-text.P Как принято считать, многие известные личности 
