@@ -1,0 +1,42 @@
+[33m1f954ab[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: add burger menu modal fix style
+[33me75a080[m HEAD@{1}: commit: add modal mask big-head
+[33m45211c0[m HEAD@{2}: commit: add header-big
+[33m0235dce[m HEAD@{3}: commit: add red style
+[33mcb36191[m HEAD@{4}: commit: add text in contact
+[33m3103317[m HEAD@{5}: commit: fix style
+[33m7821a8a[m HEAD@{6}: commit: fix bug
+[33mdd46c11[m HEAD@{7}: commit: fix home page
+[33mfb21f82[m HEAD@{8}: commit: page-contact
+[33mf564257[m HEAD@{9}: commit: page-404
+[33m0c54d66[m HEAD@{10}: commit: finished ourlinks
+[33mb50ee67[m HEAD@{11}: commit: panel-link
+[33m7f85884[m HEAD@{12}: commit: page-text
+[33m70bd416[m HEAD@{13}: commit: fix
+[33m642eb96[m HEAD@{14}: commit: fix
+[33ma811d94[m HEAD@{15}: commit: fix layout
+[33m6e9d7c8[m HEAD@{16}: commit: patch
+[33m4a70886[m HEAD@{17}: commit: patch
+[33m3a3fc67[m HEAD@{18}: commit (merge): commit
+[33m7bec631[m HEAD@{19}: reset: moving to HEAD
+[33m7bec631[m HEAD@{20}: pull origin HEAD: Merge made by the 'recursive' strategy.
+[33m4a4e0b2[m HEAD@{21}: commit: fix patch
+[33m23f60a4[m HEAD@{22}: commit: fix bug
+[33mb8223e1[m HEAD@{23}: commit: fix layout
+[33ma14eb3f[m HEAD@{24}: commit: games over
+[33me36c28f[m HEAD@{25}: commit: add validator
+[33me6413ac[m HEAD@{26}: commit: encyclopedia and subscription finished
+[33m4303741[m HEAD@{27}: commit: encyclopedia work
+[33md7bab0e[m HEAD@{28}: commit: blog finished
+[33md390646[m HEAD@{29}: commit: conditions finished
+[33mb6377b4[m HEAD@{30}: commit: fixed bug
+[33ma1613db[m HEAD@{31}: commit: fixed bug
+[33mde21acb[m HEAD@{32}: commit: advantagaes finished
+[33m49baf1b[m HEAD@{33}: commit: goods add mixin
+[33m8c4aa9b[m HEAD@{34}: commit: goods slider
+[33m1927a08[m HEAD@{35}: commit: fixed bug
+[33mf3f42dc[m HEAD@{36}: commit: fixed bug
+[33m6985927[m HEAD@{37}: commit: header and basic finishtd
+[33mf322715[m HEAD@{38}: Branch: renamed refs/heads/master to refs/heads/main
+[33mf322715[m HEAD@{40}: commit: first step
+[33m7930d44[m HEAD@{41}: Branch: renamed refs/heads/master to refs/heads/master
+[33m7930d44[m HEAD@{43}: commit (initial): new project
