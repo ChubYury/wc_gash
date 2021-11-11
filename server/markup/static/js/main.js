@@ -15894,9 +15894,11 @@ exports["default"] = _default;
 
 var burger = document.getElementById('js-menu-trigger');
 var nav = document.getElementsByClassName('navbar')[0];
+var bodyGlobal = document.body;
 burger.addEventListener('click', function () {
   burger.classList.toggle('is-active');
   nav.classList.toggle('is-active');
+  bodyGlobal.classList.toggle('not-scroll');
 });
 
 /***/ })

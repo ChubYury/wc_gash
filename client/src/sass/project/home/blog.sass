@@ -25,7 +25,7 @@
     top: -40px
     z-index: 1000
     +mq-sm
-      top: -473px
+      top: -467px
     +mq-md
       top: -40px
     +mq-lg
@@ -59,12 +59,17 @@
       pb: 40px
       
   .slide
+    d: flex
     flex-wrap: wrap
-    max-w: 270px
+    jc: space-between
+    w: 270px
     h: 390px
     ma: 0px auto
     +mq-sm
-      max-w: 100%
+      w: 100%
+      ma: 0px
+    +mq-md
+      w: 98%
     &:hover
       box-shadow: none
       .slide__title
@@ -80,13 +85,14 @@
         w: 100%
         +mq-sm
           w: 50%
+          mt: 20px
       &text
         w: 100%
         +mq-sm
           w: 50%
-          h: 70%
       &date
         w: 100%
+        pa: 0px 25px 20px 25px
         +mq-sm
           w: 50%
        
@@ -98,7 +104,7 @@
   +mq-sm
     d: block
   +mq-md
-    w: 48%
+    w: 50%
   &__
     &wrap
       pb: 40px
@@ -107,17 +113,16 @@
     jc: space-between
     w: 230px
     h: 390px
-    ma: auto
+    
     +mq-md
-      w: 155px
-      ma: initial
+      w: 170px
+      
     +mq-lg
-      w: 200px
-      ma: auto
+      w: 220px
       &:hover
         box-shadow: 5px 20px 9px rgba(86, 107, 118, 0.21)
     +mq-xl
-      w: 260px
+      w: 270px
     &__
       &pic
         h: 144px
