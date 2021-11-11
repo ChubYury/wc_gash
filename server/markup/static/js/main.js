@@ -11912,16 +11912,17 @@ var _jquery = _interopRequireDefault(__webpack_require__(3));
 
 document.addEventListener('DOMContentLoaded', function () {
   var maskName = new _inputmask["default"]('a{1,40}');
-  var maskMail = new _inputmask["default"]('a{1,40}@*{1,10}');
   var maskPhone = new _inputmask["default"]('+38 (999) 999 99 99');
-  var inputPhone = document.getElementById('phone');
-  maskPhone.mask(inputPhone);
+  var inputNameVisit = document.getElementById('name-visit');
+  maskName.mask(inputNameVisit);
   var inputPhoneVisit = document.getElementById('phone-visit');
   maskPhone.mask(inputPhoneVisit);
   var inputPhoneSelect = document.getElementById('phone-select');
   maskPhone.mask(inputPhoneSelect);
   var inputPhoneFeedback = document.getElementById('phone-feedback');
   maskPhone.mask(inputPhoneFeedback);
+  var inputPhone = document.getElementById('phone');
+  maskPhone.mask(inputPhone);
 });
 
 /***/ }),
@@ -15492,7 +15493,8 @@ _micromodal["default"].init({
   disableFocus: false,
   awaitOpenAnimation: false,
   awaitCloseAnimation: false,
-  debugMode: true
+  debugMode: true,
+  targetModal: 'modal'
 });
 
 var buttons = Array.from(document.getElementsByClassName('js-modal-trigger'));
@@ -15501,13 +15503,14 @@ if (buttons.length) {
   buttons.forEach(function (button) {
     button.addEventListener('click', function (e) {
       e.preventDefault();
-      var modalEntity = document.getElementById(button.dataset.micromodalTrigger);
-      console.log(modalEntity);
+      console.log(button.dataset);
+      var modalEntity = document.getElementById(button.dataset.modalName);
       var mymodal = document.getElementById('innerModal');
       console.log(mymodal);
       mymodal.innerHTML = modalEntity.innerHTML;
+      console.log(_micromodal["default"]);
 
-      _micromodal["default"].show(button.dataset.micromodalTrigger);
+      _micromodal["default"].show('formModal');
 
       document.dispatchEvent(new Event('dom-bind'));
     });

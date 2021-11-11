@@ -1,6 +1,6 @@
 .goods-title
   w: 100%
-  pt: 60px
+  pt: 127px
   pb: 30px
   color: var(--theme-text-2)
   
@@ -10,16 +10,18 @@
   pb: 60px
   
   .control
-    top: -20px
+    top: -55px
+    w: 20px
+    h: 20px
     +mq-lg
-      top: -40px
+      top: -67px
       w: 40px
       h: 40px
       &:hover
         box-shadow: 0px 8px 4px 0px rgba(57, 60, 73, 0.2)
       &:active
         box-shadow: none
-      fs: 15px
+      
     &--
       &prev
         right: 40px
@@ -39,8 +41,8 @@
     &description
       w: 100%
       pa: 20px 0px
-      br-t: 5px solid var(--theme-text-3)
-      br-b: 5px solid var(--theme-text-3)
+      br-t: 5px solid var(--theme-relief-5)
+      br-b: 5px solid var(--theme-relief-5)
       order: 2
       +mq-sm
         w: 45%
@@ -122,7 +124,11 @@
           top: 110px
           pt: 4px
           color: var(--theme-text-2)
-          fs: 15px
+          fs: 10px
+          +mq-sm
+            fs: 14px
+          +mq-lg
+            fs: 15px
     &rating
       pos: absolute
       w: 100%
@@ -159,6 +165,11 @@
         fs: 10px
       +mq-lg
         fs: 12px
+      &--
+        &decor
+          fd: underline
+          cursor: pointer
+
 .goods-table
   w: 100%
   order: 3
@@ -217,7 +228,10 @@
               fs: 13px
             +mq-lg
               fs: 14px
+          &head-primary
+            bg: var(--theme-relief-2)
           &head-secondary
+            bg: var(--theme-relief-2)
             pl: 20px
           &head-big
             fa: end

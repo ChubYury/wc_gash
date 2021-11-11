@@ -1,23 +1,98 @@
-.basic-slider
-  h: 100%
-  pos: relative
+.basic
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 200px 200px
+  grid-template-areas:  "a4x4_1 a4x4_1" "a4x2_1 a4x2_1" "a2x2_1 a2x2_2"
+  +mq-lg
+    h: 523px
+    grid-template-columns: 25% 25% 20% 30%
+    grid-template-rows: 261px 261px
+    grid-template-areas:  "a4x4_1 a4x4_1 a4x2_1 a4x2_1" "a4x4_1 a4x4_1 a2x2_1 a2x2_2" 
+  +mq-xl
+    grid-template-rows: 295px 295px                          
 
+  .item
+    pos: relative
+    min-w: 0px
+    &--
+      &big
+        grid-area: a4x4_1
+      &top
+        grid-area: a4x2_1
+        top: -4px
+        +mq-lg
+          top: 0px
+        +mq-xl
+      &left
+        grid-area: a2x2_1
+        top: -4px
+        +mq-lg
+          top: 0px
+        
+      &right
+        grid-area: a2x2_2
+        top: -4px
+        +mq-lg
+          top: 0px
+    &__
+      &wrap
+        min-w: 0px
+      &img
+        w: 100%
+        h: 100%
+        object-fit: cover
+        object-position: center
+      &text
+        pos: absolute
+        max-w: 270px
+        top: 10%
+        left: 10px
+        +mq-lg
+          top: 20%
+          left: 10px
+        +mq-xl
+          top: 70px
+          left: 20px
+      &text-title
+        mb: 10px
+        fw: 700
+        fs: 20px
+        color: var(--theme-text-1)
+        +mq-sm
+          mb: 23px
+        +mq-md
+          fs: 29px
+        +mq-lg
+          fs: 30px
+        +mq-xl
+          fs: 32px
+      &text-subtitle
+        fw: 700
+        fs: 15px
+        color: var(--theme-text-2)
+        +mq-md
+          fs: 16px
+        +mq-lg
+          fs: 18px
+        +mq-xl
+          fs: 20px
+.basic-slider
   .control
-    bottom: 5px
+    bottom: 4px
     +mq-lg
-      w: 40px
-      h: 40px
-      fs: 15px
+      w: 43px
+      h: 43px
+      fs: 21px
     &--
       &prev
         +mq-lg
-          top: 266px
+          top: 308px
           right: 0px
         +mq-xl
-          top: 330px
+          top: 338px
       &next
         +mq-lg
-          top: 226px
+          top: 261px
           right: 0px
         +mq-xl
           top: 295px
@@ -26,7 +101,7 @@
   position: relative
   width: 100%
   h: 330px
-  +mq-sm
+  +mq-lg
     h: 523px
   +mq-xl
     h: 590px
@@ -45,9 +120,9 @@
     &text
       pos: absolute
       w: 100%
-      pa: 20px
+      pa: 5px
       right: 0px
-      bottom: 66px
+      bottom: 57px
       +mq-lg
         w: 496px
       +mq-xl
@@ -70,88 +145,3 @@
         fs: 11px
       +mq-xl
         fs: 13px
-
-  
-
-.basic-tiles
-  d: flex
-  flex-wrap: wrap
-  pos: relative
-  +mq-lg
-    h: 523px
-  +mq-xl
-    h: 590px
-  
-.item
-  pos: relative
-  top: -5px
-  +mq-lg
-    top: 0px
-  +mq-xl
-    h: 50%
-  &__
-    &img
-      w: 100%
-      h: 100%
-      object-fit: cover
-      object-position: center
-    &text
-      pos: absolute
-      max-w: 270px
-      top: 10%
-      left: 10px
-      +mq-md
-        top: 30%
-        left: 30px
-      +mq-lg
-        top: 20%
-        left: 10px
-      +mq-xl
-        top: 18%
-        left: 3%
-      
-    &text-title
-      mb: 10px
-      fw: 700
-      fs: 20px
-      color: var(--theme-text-1)
-      +mq-sm
-        mb: 23px
-        fs: 32px
-      +mq-md
-        fs: 33px
-      +mq-lg
-        fs: 34px
-      +mq-xl
-        fs: 35px
-    &text-subtitle
-      fw: 700
-      fs: 15px
-      color: var(--theme-text-2)
-      +mq-sm
-        fs: 20px
-      +mq-md
-        fs: 23px
-      +mq-lg
-        fs: 24px
-      +mq-xl
-        fs: 25px
-  &--
-    &top
-      w: 100%
-    &left
-      w: 50%
-      +mq-sm
-        w: 40%
-      +mq-lg
-        w: 50%
-      +mq-xl
-        w: 40%
-    &right
-      w: 50%
-      +mq-sm
-        w: 60%
-      +mq-lg
-        w: 50%
-      +mq-xl
-        w: 60%

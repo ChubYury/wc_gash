@@ -7,15 +7,25 @@
   jc: space-between
   &__
     &title
-      w: 100%
+      w: 32%
       mb: 20px
-    
+    &name-btn
+      mr: 80px
+      pt: 10px
+      color: var(--theme-text-2)
+      fw: 700
+      fs: 9px
+      +mq-sm
+        fs: 11px
+      +mq-lg
+        mr: 150px
+        fs: 14px
     
   .control
     top: -40px
     z-index: 1000
     +mq-sm
-      top: -454px
+      top: -473px
     +mq-md
       top: -40px
     +mq-lg
