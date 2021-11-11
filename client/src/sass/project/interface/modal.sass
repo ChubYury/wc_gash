@@ -1,10 +1,11 @@
-//.micromodal-slide
-  //display: none
-
-  //&.is-open
-    //display: block
 
 .modal
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10000
   &[aria-hidden='true']
     display: none
   &__
@@ -18,12 +19,39 @@
       display: flex
       justify-content: center
       align-items: center
-      z-index: 1000
     &container
+      
+      top: 60px
+      margin: auto
       background-color: #fff
       padding: 30px
       max-width: 500px
       max-height: 100vh
       border-radius: 4px
       overflow-y: auto
+      position: relative
       box-sizing: border-box
+      z-index: 555
+
+  .form
+    w: 100%
+    &__
+      &title
+        mb: 10px
+        fs: 20px
+        color: var(--theme-text-2)
+      &item-wrap
+        w: 100%
+      &item-inp
+        w: 100%
+        mb: 10px
+        pa: 10px
+        border-radius: 3px
+        border: 1px solid var(--theme-text-2)
+  .btn-submit
+    ma: 0px auto
+    pa: 19px 57px 16px 56px
+    cursor: pointer
+
+.content
+  d: none

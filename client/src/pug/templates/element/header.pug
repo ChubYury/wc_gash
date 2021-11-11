@@ -69,10 +69,10 @@ if big != true
             +e.phone.A(href="tel:+38(096)747 53 98") #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
             +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
         +b.order
-          +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-1") #[+e.line.SPAN –] Запись на прием
-          +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-2") #[+e.line.SPAN –] Индивидуальный подбор матраса 
-          +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-3") #[+e.line.SPAN –] Обратный звонок
-        +b.btn-menu.js-menu-trigger.BUTTON
+          +b.btn-trigger.js-modal-trigger.BUTTON(data-modal-name="modal-1") #[+e.line.SPAN –] Запись на прием
+          +b.btn-trigger.js-modal-trigger.BUTTON(data-modal-name="modal-2") #[+e.line.SPAN –] Индивидуальный подбор матраса 
+          +b.btn-trigger.js-modal-trigger.BUTTON(data-modal-name="modal-3") #[+e.line.SPAN –] Обратный звонок
+        +b.btn-menu.BUTTON#js-menu-trigger
               +e.line.--top
               +e.line.--center
               +e.line.--bottom          
@@ -98,17 +98,17 @@ else
           +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
         +b.work
           +e.phone.A(href="tel:+38(096)747 53 98") #[+e.icon.icon_phone &#xe090;]+38 (096) 747-5398
-          +e.time пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
+          +e.time.P пн-пт: 8:00 - 21:00  •  сб: 9:00 - 20:00  •  вс: 10:00 - 19:00
           +b.order
-            +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-1") #[+e.line.SPAN –] Запись на прием
-            +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-2") #[+e.line.SPAN –] Индивидуальный подбор матраса 
-            +b.btn-trigger.js-modal-trigger.BUTTON(data-micromodal-trigger="modal-3") #[+e.line.SPAN –] Обратный звонок
+            +b.btn-trigger.js-modal-trigger.BUTTON(data-modal-name="modal-1") #[+e.line.SPAN –] Запись на прием
+            +b.btn-trigger.js-modal-trigger.BUTTON(data-modal-name="modal-2") #[+e.line.SPAN –] Индивидуальный подбор матраса 
+            +b.btn-trigger.js-modal-trigger.BUTTON(data-modal-name="modal-3") #[+e.line.SPAN –] Обратный звонок
         +b.btn-big.BUTTON #[+e.icon.icon-heart-min.SPAN]
         +b.btn-big.--left.BUTTON
           +e.num-secondary.P 5
           +e.icon.icon-basket.SPAN
           +e.num-primary.P 3500 грн
-        +b.btn-menu.js-menu-trigger.BUTTON
+        +b.btn-menu.BUTTON#js-menu-trigger
               +e.line.--top
               +e.line.--center
               +e.line.--bottom   

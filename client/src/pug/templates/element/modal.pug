@@ -1,33 +1,30 @@
 include ../../mixins/index
 
 
-+b.modal-wrapper#modal-wrapper
-  +b.modal.modal-position.--position-2.pos-abs(aria-hidden='true')#formModal
-    +e.overlay(data-micromodal-close)
-    +e.container#innerModal(aria-modal='true') 
 
++b.content(id="modal-1")
+  +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-visit" method="POST" enctype="multipart/form-data")
+    +e.title.H3 Запись на прием
+    +e.item-wrap
+      +e.item-inp.dim.INPUT(id = 'name-visit' name="name" type="text" data-rule="required|name" placeholder="Name")
+    +e.item-wrap
+      +e.item-inp.dim.INPUT(id = 'phone-visit' name="tel" type="tel" data-rule="required" placeholder="+380 (__) ___ __ __")
+    +b.btn-submit.btn.BUTTON(data-micromodal-close type="submit") Отправить
 
++b.content(id="modal-2")
+  +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-select" method="POST" enctype="multipart/form-data")
+    +e.title.H3 Индивидуальный подбор матраса
+    +e.item-wrap
+      +e.item-inp.dim.INPUT(id = 'name-visit' name="name" type="text" data-rule="required|name" placeholder="Name")
+    +e.item-wrap
+      +e.item-inp.dim.INPUT(id = 'phone-select' name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
+    +b.btn-submit.btn.BUTTON(data-micromodal-close type="submit") Отправить
 
-+b.modal.micromodal-slide(id="modal-1" aria-hidden="true")
-  +e.overlay(tabindex="-1" data-micromodal-close)
-    +e.container(role="dialog" aria-modal="true" aria-labelledby="modal-1-title" aria-describedby="modal-1-content")
-       +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-visit" method="POST" enctype="multipart/form-data")
-        +e.input-wrap
-          +e.input-tel.dim.INPUT(id = 'phone-visit' name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
-        +e.btn-submit.btn.BUTTON(data-micromodal-close type="submit") Отправить
-
-+b.modal.micromodal-slide(id="modal-2" aria-hidden="true")
-  +e.overlay(tabindex="-1" data-micromodal-close)
-    +e.container(role="dialog" aria-modal="true" aria-labelledby="modal-2-title" aria-describedby="modal-2-content")
-      +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-select" method="POST" enctype="multipart/form-data")
-        +e.input-wrap
-          +e.input-tel.dim.INPUT(id = 'phone-select' name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
-        +e.btn-submit.btn.BUTTON(data-micromodal-close type="submit") Отправить
-
-+b.modal.micromodal-slide(id="modal-3" aria-hidden="true")
-  +e.overlay(tabindex="-1" data-micromodal-close)
-    +e.container(role="dialog" aria-modal="true" aria-labelledby="modal-3-title" aria-describedby="modal-3-content")
-      +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-feedback" method="POST" enctype="multipart/form-data")
-        +e.input-wrap
-          +e.input-tel.dim.INPUT(id = 'phone-feedback' name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
-        +e.btn-submit.btn.BUTTON(data-micromodal-close type="submit") Отправить
++b.content(id="modal-3")
+  +b.form.js-form-ajax.FORM(action="https://httpbin.org/post" id="form-feedback" method="POST" enctype="multipart/form-data")
+    +e.title.H3 Обратный звонок
+    +e.item-wrap
+      +e.item-inp.dim.INPUT(id = 'name-visit' name="name" type="text" data-rule="required|name" placeholder="Name")
+    +e.item-wrap
+      +e.item-inp.dim.INPUT(id = 'phone-feedback' name="tel" type="tel" data-rule="required|phone" placeholder="+380 (__) ___ __ __")
+    +b.btn-submit.btn.BUTTON(data-micromodal-close type="submit") Отправить

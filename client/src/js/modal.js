@@ -1,4 +1,4 @@
-import MicroModal from 'micromodal';
+import MicroModal from 'micromodal'
 
 MicroModal.init({
   onShow: modal => console.info(`${modal.id} is shown`), // [1]
@@ -10,6 +10,7 @@ MicroModal.init({
   awaitOpenAnimation: false, // [7]
   awaitCloseAnimation: false, // [8]
   debugMode: true, // [9]
+  targetModal: 'modal',
 })
 // ищем все кнопки-откывашки модалов
 const buttons = Array.from(document.getElementsByClassName('js-modal-trigger'))
@@ -22,15 +23,16 @@ if (buttons.length) {
       // убираем стандартное поведение кнопки
       e.preventDefault()
       // у кнопки есть дата-атрибут с именем нужного модала
-      const modalEntity = document.getElementById(button.dataset.micromodalTrigger)
-      console.log(modalEntity)
+      console.log(button.dataset)
+      const modalEntity = document.getElementById(button.dataset.modalName)
       // находим контейнер, куда встатим найденный код
       const mymodal = document.getElementById('innerModal')
       console.log(mymodal)
       // вставляем в готовый контейнер - html искомого модала
       mymodal.innerHTML = modalEntity.innerHTML
       // открываем наш модал
-      MicroModal.show(button.dataset.micromodalTrigger)
+      console.log(MicroModal)
+      MicroModal.show('formModal')
 
       document.dispatchEvent(new Event('dom-bind'))
     })

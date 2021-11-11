@@ -6,6 +6,38 @@
   bg: var(--theme-accent-white)
   +mq-md
     mr: 50px
+  
+  .ds-table
+    w: 80%
+    +mq-sm
+      w: 89%
+    +mq-md
+      w: 89%
+    +mq-lg
+      w: 91%
+    +mq-xl
+      w: 93%
+    ma: 22px 30px 40px 30px
+    &__
+      &head
+        bg: var(--theme-relief-2)
+      &row--color
+        bg: var(--theme-relief-2)
+      &cell
+        fs: 10px
+        +mq-md
+          fs: 13px
+        &--
+          &head
+            fw: 700
+            fa: center
+            fs: 11px
+          +mq-md
+            fs: 14px
+          &column
+            pt: 18px
+            fa: center
+        
   &__
     &title
       pb: 20px
@@ -118,39 +150,7 @@
         lh: 0
 
 
-.ds-table
-  w: 80%
-  ma: 22px 30px 40px 30px
-  +mq-sm
-    w: 89%
-  +mq-md
-    w: 89%
-  +mq-lg
-    w: 91%
-  +mq-xl
-    w: 93%
-  &__
-    &row
-      h: 44px
-      &:nth-child(odd) 
-        bg: var(--theme-accent-white)
-      &:nth-child(even) 
-        bg: var(--theme-relief-2)
-    &cell
-      fs: 10px
-      +mq-md
-        fs: 13px
-      &--
-        &head
-          fw: 700
-          bg: var(--theme-relief-2)
-          fa: center
-          fs: 11px
-        +mq-md
-          fs: 14px
-        &column
-          pt: 18px
-          fa: center
+
 
 .panel
   pa: 20px 30px 30px 30px
@@ -159,6 +159,7 @@
       w: 25px
       h: 25px
       mr: 2px
+      cursor: pointer
       &link-img
         w: 100%
         h: 100%

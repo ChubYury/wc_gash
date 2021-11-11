@@ -18,32 +18,32 @@
     
         
   .navbar
+    d: none
+    +mq-lg
+      d: block
     &.is-active
       d: block
       pos: fixed
       overflow: auto
       w: 100%
       h: 100vh
-      bg: var(--theme-accent-grey)
+      bg: var(--theme-accent-white)
       top: 0px
       right: 0px
-      z-index: 15
+      z-index: 10000
       .navbar
         &__
           &list
             f-dir: column
             ai: center
           &item
-            //w: 100%
             ma: 5px 0px
             pa: 10px
-            &:hover
-              bg: var(--theme-primary-green)
     &__
       &list
         d: flex
       &link
-        margin: 0px 41px 0px 3px
+        ma: 0px 41px 0px 3px
         fw: 400
         fs: 9px
         color: var(--theme-text-2)
@@ -57,19 +57,15 @@
           fd: underline
         
   .info
-    d: none
     ml: 20px
     +mq-lg
       w: 80%
-      display: block
+      
     &__
       &work
-        d: flex
-        f-dir: column
-        mt: 20px
-        +mq-md
-          mt: 10px
+        d: none
         +mq-lg
+          d: flex
           mt: 20px
           f-dir: row
           ai: flex-end
@@ -134,24 +130,43 @@
   pos: relative
   w: 24px
   h: 22px
-  mr: 5px
+  ma: auto 5px
   br: none
   bg: var(--theme-accent-white)
+  z-index: 10000
   +mq-lg
     d: none
+  &.is-active
+    pos: fixed
+    .btn-menu
+      &__
+        &line
+          w: 92%
+          &--
+            &top
+              transform: skewY(45deg)
+            &center
+              transform: rotateY(90deg)
+            &bottom
+              transform: skewY(-45deg)
   &__
     &line
       pos: absolute
       w: 24px
       h: 2px
       bg: var(--theme-text-1)
+      tr: .5s
       &--
         &top
           top: 0%
+          transition-duration: 0.5s
+          transform-origin: 0% 0%
         &center
           top: 50%
         &bottom
           top: 100%
+          transition-duration: 0.5s
+          transform-origin: 0% 100%
 
 .kit-bg
   d: none

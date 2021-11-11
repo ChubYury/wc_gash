@@ -1,7 +1,8 @@
 .head-big-wrap
   &--
     &line
-      br-b: 1px solid var(--theme-relief-3)  
+      +mq-lg
+        br-b: 1px solid var(--theme-relief-3)  
 .head-big
   d: flex
   flex-wrap: wrap
@@ -32,7 +33,6 @@
           color: var(--theme-text-1)
           
   .info
-    d: none
     +mq-lg
       d: flex
       w: 60%
@@ -40,11 +40,13 @@
       pa: 19px 0px 17px 34px 
     &__
       &search
+        d: none
         fs:10px
         color: var(--theme-text-1)
         fd: none
         cursor: pointer
         +mq-lg
+          d: block
           fs: 13px
       &search-icon
         fs: 13px
@@ -53,19 +55,42 @@
   
   
   .navbar
+    d: none
+    +mq-lg
+      d: block
+    &.is-active
+      d: block
+      pos: fixed
+      overflow: auto
+      w: 100%
+      h: 100vh
+      bg: var(--theme-accent-white)
+      top: 0px
+      right: 0px
+      z-index: 10000
+      .navbar
+        &__
+          &list
+            f-dir: column
+            ai: center
+          &item
+            ma: 5px 0px
+            pa: 10px
     &__
       &list
         d: flex
       &link
-        margin: 0px 41px 0px 3px
         fw: 400
         fs: 9px
         color: var(--theme-text-2)
         fd: none
         cursor: pointer
         +mq-md
+          mr:30px
+          ml: 3px
           fs: 11px
         +mq-xl
+          mr:41px
           fs: 13px
         &:hover
           fd: underline
@@ -188,15 +213,17 @@
           margin: 19px 0px 0px 0px
 
   .btn-menu
-    d: block
     pos: relative
     w: 24px
     h: 22px
-    mr: 5px
+    ma: auto 5px
     br: none
     bg: var(--theme-accent-white)
+    z-index: 10000
     +mq-lg
       d: none
+    &.is-active
+      pos: fixed
     &__
       &line
         pos: absolute

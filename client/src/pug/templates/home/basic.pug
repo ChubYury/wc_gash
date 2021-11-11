@@ -31,11 +31,12 @@ include ../../mixins/index
 
 +b.basic-wrap.SECTION
   +b.g-row.--appearance_spaced.--space_none
-    +b.g-cell.g-cols--12.--6-lg 
-      +b.basic-slider.single-item
-        +createBasicSlider(basicSlideData)
-    +b.g-cell.g-cols--12.--6-lg
-      +b.basic-tiles
+    +b.g-cell.g-cols--12 
+      +b.basic
+        +b.item.--big
+          +e.wrap
+            +b.basic-slider.single-item
+              +createBasicSlider(basicSlideData)
         +b.item.--top
           +e.img.IMG(src="../static/img/home/basic-img-2.jpg" alt="photo man" title='photo man')
           +e.text
@@ -51,4 +52,3 @@ include ../../mixins/index
           +e.text
             +e.text-title.H2 Приветствует
             +e.text-subtitle.P Киевская мастерская матрасов GASH!
-        
