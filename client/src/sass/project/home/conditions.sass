@@ -3,10 +3,11 @@
   d: flex
   jc: space-around
   flex-wrap: wrap
-  +mq-md
+  +mq-sm
     jc: space-around
-  +mq-xl
+  +mq-md
     jc: space-between
+  //+mq-xl
   &__
     &title
       w: 100%
@@ -23,7 +24,10 @@
     box-shadow: -10px 30px 29px rgba(86, 107, 118, 0.21)
     tr: .5s
     cursor: pointer
+    +mq-md
+      w: 220px
     +mq-lg
+      w: 250px
       &:hover
         bg: var(--theme-text-1)
         
@@ -33,6 +37,8 @@
           color: var(--theme-accent-white)
         .bar__icon
           color: var(--theme-accent-white)
+    +mq-xl
+      w: 170px
     &__        
       &icon
         mb: 50px

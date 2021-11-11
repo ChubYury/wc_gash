@@ -14,6 +14,7 @@ body
   fs: 8px
   fa: center
   tr: .5s
+  cursor: pointer
   +mq-sm
     fs: 10px
   +mq-md
@@ -138,11 +139,18 @@ body
     color: var(--theme-text-2)
     bg: var(--theme-accent-white)
     right: 52%
+    +mq-sm
+      right: 51%
+    +mq-md
+      right: 51%
   &--next
     color: var(--theme-accent-white)
     bg: var(--theme-text-1)
     right: 46%
-
+    +mq-sm
+      right: 47%
+    +mq-md
+      right: 48%
 //************** titles ******************************
 .title-secondary
   color: var(--theme-text-2)

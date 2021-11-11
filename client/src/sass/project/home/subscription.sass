@@ -4,15 +4,18 @@
   d: flex
   flex-wrap: wrap
   jc: space-between
-  pa: 30px 30px
+  pa: 15px 30px
   bg: var(--theme-text-2)
   br-l: 2px solid var(--theme-text-1)
   &__
     &title
       w: 100%
       color: var(--theme-accent-white)
-      +mq-md
-        w: 60%
+      fs: 14px
+      +mq-lg
+        w: 50%
+        pt: 10px
+        fs: 16px
 
 .form
   display: flex
@@ -20,15 +23,17 @@
   flex-wrap: wrap
   justify-content: flex-start
   w: 100%
-  +mq-md
-    w: 40%
+  +mq-lg
+    w: 50%
   &__
     &input-wrap
       pos: relative
       w: 100%
+      mr: 10px
       +mq-sm
         w: 54%
     &input-tel
+      w: 100%
       ma: 10px
       pa: 16px 19px 19px 19px
       br: none
