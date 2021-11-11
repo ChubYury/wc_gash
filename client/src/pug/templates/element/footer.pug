@@ -2,9 +2,13 @@ include ../../mixins/index
 
 +b.footer-wrap.FOOTER
   +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
-    +b.footer 
-      +e.logo
-        +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+    +b.footer
+      if linkLogo != true
+          +e.logo
+            +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+      else 
+        +e.logo.A(href='../templates/')
+          +e.logo--img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
       +b.contact 
         +e.title.P Наши контакты
         +e.phone.A(href="tel:+38(096)747 53 98") #[+b.SPAN +38(096)747 53 98]  
@@ -18,7 +22,7 @@ include ../../mixins/index
       +b.social
         +e.title.P Мы в социальных сетях
         +e.net
-          +e.link.A #[+e.link-icon.icon-instagram.SPAN] Instagram
-          +e.link.A #[+e.link-icon.icon-youtube.SPAN] YouTube
-          +e.link.A #[+e.link-icon.icon-facebook.SPAN] Facebook
+          +e.link.A(href='https://www.instagram.com') #[+e.link-icon.icon-instagram.SPAN] Instagram
+          +e.link.A(href='https://www.youtube.com/') #[+e.link-icon.icon-youtube.SPAN] YouTube
+          +e.link.A(href='https://www.facebook.com/') #[+e.link-icon.icon-facebook.SPAN] Facebook
         +e.text © GASH 2018. Все права защищены

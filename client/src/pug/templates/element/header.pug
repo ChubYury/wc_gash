@@ -61,8 +61,12 @@ if big != true
     //+b.myModal(id='innerModal')
     +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
       +b.head
-        +e.logo
-          +e.img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+        if linkLogo != true
+          +e.logo
+            +e.img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
+        else 
+          +e.logo.A(href='../templates/')
+            +e.img.IMG(src="../static/img/logo.png" alt="logo" title='logo')
         +b.info
           +createNavMenu(navMenuData)
           +e.work

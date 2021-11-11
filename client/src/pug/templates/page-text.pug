@@ -1,9 +1,13 @@
 extends ./base
 
 block header
+  - const linkLogo = true
   include ./element/header
        
 block main
   main.main
     include ./text/body-text
     include ./element/our-links
+
+block footer
+  include ./element/footer
