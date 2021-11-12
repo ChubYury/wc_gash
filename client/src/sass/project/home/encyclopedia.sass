@@ -7,7 +7,7 @@
       jc: space-between
       pb: 30px
     &name-btn
-      mr: 80px
+      mr: 60px
       pb: 3px
       color: var(--theme-text-2)
       fw: 700
@@ -15,13 +15,14 @@
       +mq-sm
         fs: 11px
       +mq-lg
-        mr: 150px
+        mr: 172px
         fs: 14px
   .slide
     d: flex
     f-dir: column
+    jc: space-between
     max-w: 270px
-    h: 360px
+    h: 370px
     ma: 0px auto
     bg: var(--theme-relief-2)
     cursor: pointer
@@ -37,6 +38,16 @@
     &__
       &pic
         h: 150px
+        color: var(--theme-text-2)
+      &title
+        pa: 16px 32px
+      &text
+        color: var(--theme-text-4)
+        lh: 1.6
+      &date
+        padding: 10px 25px 28px 25px
+        color: var(--theme-text-8)
+
 
   .control
     top: -53px

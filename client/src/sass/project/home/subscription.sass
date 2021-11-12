@@ -29,12 +29,11 @@
     &input-wrap
       pos: relative
       w: 100%
-      mr: 10px
+      ma: 10px 10px 10px 0px
       +mq-sm
         w: 54%
     &input-tel
       w: 100%
-      ma: 10px
       pa: 16px 19px 19px 19px
       br: none
       &::placeholder
@@ -43,9 +42,11 @@
         +mq-lg
           fs: 15px
     &btn-submit
-      ma: 10px
+      ma: 10px auto 10px auto
       pa: 19px 57px 16px 56px
       cursor: pointer
+      +mq-sm
+        ma: 10px
 
 
 [data-type='validator-error']

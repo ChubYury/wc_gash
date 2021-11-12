@@ -10,15 +10,16 @@
       w: 32%
       mb: 20px
     &name-btn
-      mr: 80px
-      pt: 10px
+      mr: 60px
+      pt: 3px
       color: var(--theme-text-2)
       fw: 700
       fs: 9px
       +mq-sm
+        pt: 7px
         fs: 11px
       +mq-lg
-        mr: 150px
+        mr: 172px
         fs: 14px
     
   .control
@@ -70,10 +71,11 @@
       ma: 0px
     +mq-md
       w: 98%
-    &:hover
-      box-shadow: none
-      .slide__title
-        color: var(--theme-text-2)
+    +mq-lg
+      &:hover
+        box-shadow: none
+        .slide__title
+          color: var(--theme-text-1)
     &__
       &pic
         w: 100%
@@ -83,6 +85,7 @@
           h:100%
       &title
         w: 100%
+        tr: .5s
         +mq-sm
           w: 50%
           mt: 20px
