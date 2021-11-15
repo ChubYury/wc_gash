@@ -9,7 +9,7 @@ $theme-default: (
     dark-blue: #133768,
     red: #DC565B,
     grey: #F9F9F9,
-    black: #262626,
+    black: #000,
     dark-grey: #8a8a8a,
     purple: #d946db,
   ),
@@ -88,7 +88,7 @@ $type-font-size-3xl: 36px;
 $type-font-size-map: (3xs: $type-font-size-3xs,  4xs: $type-font-size-4xs, 2md: $type-font-size-2md);
 $layout-map: $type-font-size-map;
 
-$type-face-body: Raleway_Regular, Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$type-face-body: Montserrat, Raleway_Regular, Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $MQ_INCLUDE_XS: true;
 $MQ_INCLUDE_XL: true;

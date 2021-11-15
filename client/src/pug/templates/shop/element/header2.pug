@@ -1,0 +1,37 @@
+include ../../../mixins/index
+
+-
+  const navMenuData = [
+    {
+      name: 'Home',
+      path: '../templates/page-index.html',
+    },
+    {
+      name: 'Catalog',
+      path: '../templates/page-index.html',
+    },
+    {
+      name: 'Payment and delivery',
+      path: '../templates/page-index.html',
+    },
+    {
+      name: 'Contacts',
+      path: '../templates/page-index.html',
+    },
+    {
+      name: 'About us',
+      path: '../templates/page-index.html',
+    },
+  ]
+
+
++b.head2-wrap.HEADER
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+      +b.head2
+        +e.logo2.A(href='../templates/page-index.html') SHOP SHOP
+        +b.navbar.NAV
+          +e.list.UL
+            each element in navMenuData
+              +e.item.LI
+                +e.link.A(href=element.path)= element.name
+        +e.search.icon-search2.SPAN

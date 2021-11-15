@@ -19,9 +19,10 @@
         pt: 7px
         fs: 11px
       +mq-lg
-        mr: 172px
+        mr: 107px
         fs: 14px
-    
+      +mq-xl
+        mr: 158px
   .control
     top: -40px
     z-index: 1000
@@ -42,11 +43,11 @@
       &prev
         right: 30px
         +mq-lg
-          right: 70px
+          right: 54px
       &next
         right: 10px
         +mq-lg
-          right: 30px
+          right: 14px
 
 
 .slider-primary
@@ -70,7 +71,7 @@
       w: 100%
       ma: 0px
     +mq-md
-      w: 98%
+      w: 100%
     +mq-lg
       &:hover
         box-shadow: none
@@ -91,6 +92,7 @@
           mt: 20px
       &text
         w: 100%
+        lh: 1.6
         +mq-sm
           w: 50%
       &date
@@ -116,14 +118,14 @@
     jc: space-between
     w: 230px
     h: 390px
-    
+    ma: 0px auto
     +mq-md
       w: 170px
       
     +mq-lg
       w: 220px
       &:hover
-        box-shadow: 5px 20px 9px rgba(86, 107, 118, 0.21)
+        box-shadow: -8px 20px 9px rgba(86, 107, 118, 0.21)
     +mq-xl
       w: 270px
     &__

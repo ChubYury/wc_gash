@@ -38,15 +38,15 @@
     &__
       &pic
         h: 150px
-        color: var(--theme-text-2)
+        //color: var(--theme-text-2)
       &title
-        pa: 16px 32px
+        pa: 16px 25px
       &text
-        color: var(--theme-text-4)
+        //color: var(--theme-text-4)
         lh: 1.6
       &date
         padding: 10px 25px 28px 25px
-        color: var(--theme-text-8)
+        //color: var(--theme-text-8)
 
 
   .control
@@ -74,6 +74,9 @@
 
 .digest-slider
   pos: relative
+  w: 100%
+  +mq-xl
+    w: 101%
   &__
     &wrap
       pb: 40px
