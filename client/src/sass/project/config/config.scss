@@ -41,8 +41,9 @@ $theme-base: map-merge($theme-default, (
     3: #ebebeb,
     4: #ea534c,
     5: #CFD0D3,
-    6: #fff,
+    6: #262626,
     7: #fff,
+    11: rgba(0, 0, 0, 0.3),
   ),
   text: (
     1: #c7332c,
@@ -53,6 +54,7 @@ $theme-base: map-merge($theme-default, (
     6: #989bab,
     7: #9A9A9A,
     8: #abb5bc,
+    11: #12d5b8,
   )
 ));
 

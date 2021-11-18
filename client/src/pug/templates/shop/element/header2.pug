@@ -29,9 +29,45 @@ include ../../../mixins/index
     +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
       +b.head2
         +e.logo2.A(href='../templates/page-index.html') SHOP SHOP
+        +b.language2.FORM
+          +e.select(data-state="")
+            +e.title(data-default="Option 0") EN
+            +b.line
+            +b.triangle2.SPAN &#9662;
+            +e.list
+              +e.input.INPUT#singleSelect0(type="radio" name="singleSelect")
+              +e.label.LABEL(for="singleSelect0") EN
+              +e.input.INPUT#singleSelect2(type="radio" name="singleSelect")
+              +e.label.LABEL(for="singleSelect2") UA
+        +b.currency2.FORM
+          +e.select(data-state="")
+            +e.title(data-default="Option 01") UAH
+            +b.line
+            +b.triangle2.SPAN &#9662;
+            +e.list
+              +e.input.INPUT#singleSelect01(type="radio" name="singleSelect2")
+              +e.label.LABEL(for="singleSelect01") UAH
+              +e.input.INPUT#singleSelect21(type="radio" name="singleSelect2")
+              +e.label.LABEL(for="singleSelect21") USD
         +b.navbar.NAV
           +e.list.UL
             each element in navMenuData
               +e.item.LI
                 +e.link.A(href=element.path)= element.name
         +e.search.icon-search2.SPAN
+        +b.basket2.A 
+          +e.num.SPAN 3
+          +e.icon.icon-basket2.SPAN
+        +e.login2.A #[+e.login2-icon.icon-login2.SPAN] LOGIN
++b.body2-wrap.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.body2.P
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero. Repellat nisi, in labore laboriosam incidunt quibusdam temporibus velit voluptatibus sit dolor tempora dicta rerum enim aliquid ad unde porro!

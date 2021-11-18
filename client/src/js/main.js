@@ -1,6 +1,7 @@
 import 'slider';
 import 'validator';
-import 'map';
 import 'mask';
 import 'modal';
 import 'burger-menu';
+import 'selectLang';
+import 'map';
